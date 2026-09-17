@@ -1,0 +1,503 @@
+symbol,company_name,status,data_type,timestamp,notes
+HINDALCO,Hindalco Industries Ltd.,success,consolidated,2026-09-15T11:45:41.762858,33 KB
+360ONE,360 ONE WAM Ltd.,success,consolidated,2026-09-15T11:49:57.470730,32 KB
+3MINDIA,3M India Ltd.,success,consolidated,2026-09-15T11:50:17.628621,32 KB
+ABB,ABB India Ltd.,success,consolidated,2026-09-15T11:50:37.624059,31 KB
+ACC,ACC Ltd.,success,consolidated,2026-09-15T11:50:57.838894,33 KB
+ACMESOLAR,ACME Solar Holdings Ltd.,success,consolidated,2026-09-15T11:51:17.989817,32 KB
+AIAENG,AIA Engineering Ltd.,success,consolidated,2026-09-15T11:51:38.379454,33 KB
+APLAPOLLO,APL Apollo Tubes Ltd.,success,consolidated,2026-09-15T11:51:58.859070,33 KB
+AUBANK,AU Small Finance Bank Ltd.,success,consolidated,2026-09-15T11:52:19.027778,31 KB
+AWL,AWL Agri Business Ltd.,success,consolidated,2026-09-15T11:52:40.197327,32 KB
+AADHARHFC,Aadhar Housing Finance Ltd.,success,consolidated,2026-09-15T11:53:00.290888,32 KB
+AARTIIND,Aarti Industries Ltd.,success,consolidated,2026-09-15T11:53:20.756548,33 KB
+AAVAS,Aavas Financiers Ltd.,success,consolidated,2026-09-15T11:53:40.905126,32 KB
+ABBOTINDIA,Abbott India Ltd.,success,auto,2026-09-15T14:59:54.972230,33 KB
+ACE,Action Construction Equipment Ltd.,success,consolidated,2026-09-15T11:54:36.655041,33 KB
+ACUTAAS,Acutaas Chemicals Ltd.,success,consolidated,2026-09-15T11:54:56.770416,32 KB
+ADANIENSOL,Adani Energy Solutions Ltd.,success,consolidated,2026-09-15T11:55:17.076272,33 KB
+ADANIENT,Adani Enterprises Ltd.,success,consolidated,2026-09-15T11:55:37.359751,33 KB
+ADANIGREEN,Adani Green Energy Ltd.,success,consolidated,2026-09-15T11:55:57.666158,32 KB
+ADANIPORTS,Adani Ports and Special Economic Zone Ltd.,success,consolidated,2026-09-15T11:56:18.024056,33 KB
+ADANIPOWER,Adani Power Ltd.,success,consolidated,2026-09-15T11:56:38.875100,33 KB
+ATGL,Adani Total Gas Ltd.,success,consolidated,2026-09-15T11:57:00.706963,32 KB
+ABCAPITAL,Aditya Birla Capital Ltd.,success,consolidated,2026-09-15T11:57:21.853349,33 KB
+ABFRL,Aditya Birla Fashion and Retail Ltd.,success,consolidated,2026-09-15T11:57:43.179534,32 KB
+ABLBL,Aditya Birla Lifestyle Brands Ltd.,success,consolidated,2026-09-15T11:58:04.256346,31 KB
+ABREL,Aditya Birla Real Estate Ltd.,success,consolidated,2026-09-15T11:58:25.714328,33 KB
+ABSLAMC,Aditya Birla Sun Life AMC Ltd.,success,consolidated,2026-09-15T11:58:47.285481,32 KB
+CPPLUS,Aditya Infotech Ltd.,success,consolidated,2026-09-15T11:59:08.429060,32 KB
+AEGISLOG,Aegis Logistics Ltd.,success,consolidated,2026-09-15T11:59:29.804694,33 KB
+AEGISVOPAK,Aegis Vopak Terminals Ltd.,success,consolidated,2026-09-15T11:59:50.976099,31 KB
+AFCONS,Afcons Infrastructure Ltd.,success,consolidated,2026-09-15T12:00:12.053732,32 KB
+AFFLE,Affle 3i Ltd.,success,consolidated,2026-09-15T12:00:33.520933,32 KB
+AJANTPHARM,Ajanta Pharmaceuticals Ltd.,success,consolidated,2026-09-15T12:00:54.893982,33 KB
+ALKEM,Alkem Laboratories Ltd.,success,consolidated,2026-09-15T12:01:16.454995,33 KB
+ABDL,Allied Blenders and Distillers Ltd.,success,consolidated,2026-09-15T12:01:37.587012,32 KB
+ARE&M,Amara Raja Energy & Mobility Ltd.,success,consolidated,2026-09-15T12:01:59.514671,32 KB
+AMBER,Amber Enterprises India Ltd.,success,consolidated,2026-09-15T12:02:21.000165,33 KB
+AMBUJACEM,Ambuja Cements Ltd.,success,consolidated,2026-09-15T12:02:42.398984,33 KB
+ANANDRATHI,Anand Rathi Wealth Ltd.,success,consolidated,2026-09-15T12:03:03.315143,32 KB
+ANANTRAJ,Anant Raj Ltd.,success,consolidated,2026-09-15T12:03:24.590181,32 KB
+ANGELONE,Angel One Ltd.,success,consolidated,2026-09-15T12:03:45.637852,32 KB
+ANTHEM,Anthem Biosciences Ltd.,success,consolidated,2026-09-15T12:04:06.861679,32 KB
+ANURAS,Anupam Rasayan India Ltd.,success,consolidated,2026-09-15T12:04:27.753972,32 KB
+APARINDS,Apar Industries Ltd.,success,consolidated,2026-09-15T12:04:49.203321,33 KB
+APOLLOHOSP,Apollo Hospitals Enterprise Ltd.,success,consolidated,2026-09-15T12:05:10.697027,32 KB
+APOLLOTYRE,Apollo Tyres Ltd.,success,consolidated,2026-09-15T12:05:32.049310,33 KB
+APTUS,Aptus Value Housing Finance India Ltd.,success,consolidated,2026-09-15T12:05:53.226331,32 KB
+ASAHIINDIA,Asahi India Glass Ltd.,success,consolidated,2026-09-15T12:06:14.976294,33 KB
+ASHOKLEY,Ashok Leyland Ltd.,success,consolidated,2026-09-15T12:06:36.338807,33 KB
+ASIANPAINT,Asian Paints Ltd.,success,consolidated,2026-09-15T12:06:57.713496,33 KB
+ASTERDM,Aster DM Quality Care Ltd.,success,consolidated,2026-09-15T12:07:19.084950,33 KB
+ASTRAL,Astral Ltd.,success,consolidated,2026-09-15T12:07:40.450524,32 KB
+ATHERENERG,Ather Energy Ltd.,success,consolidated,2026-09-15T12:08:01.132505,30 KB
+ATUL,Atul Ltd.,success,consolidated,2026-09-15T12:08:22.479018,33 KB
+AUROPHARMA,Aurobindo Pharma Ltd.,success,consolidated,2026-09-15T12:08:43.886643,33 KB
+AIIL,Authum Investment & Infrastructure Ltd.,success,consolidated,2026-09-15T12:09:04.747654,31 KB
+DMART,Avenue Supermarts Ltd.,success,consolidated,2026-09-15T12:09:25.940368,33 KB
+AXISBANK,Axis Bank Ltd.,success,consolidated,2026-09-15T12:09:47.222455,33 KB
+BEML,BEML Ltd.,success,consolidated,2026-09-15T12:10:08.567589,32 KB
+BLS,BLS International Services Ltd.,success,consolidated,2026-09-15T12:10:29.699671,32 KB
+BSE,BSE Ltd.,success,consolidated,2026-09-15T12:10:50.896756,32 KB
+BAJAJ-AUTO,Bajaj Auto Ltd.,success,consolidated,2026-09-15T12:11:12.183291,33 KB
+BAJFINANCE,Bajaj Finance Ltd.,success,consolidated,2026-09-15T12:11:33.625908,33 KB
+BAJAJFINSV,Bajaj Finserv Ltd.,success,consolidated,2026-09-15T12:11:55.082052,33 KB
+BAJAJHLDNG,Bajaj Holdings & Investment Ltd.,success,consolidated,2026-09-15T12:12:16.389336,32 KB
+BAJAJHFL,Bajaj Housing Finance Ltd.,success,auto,2026-09-15T15:00:16.109795,32 KB
+BALKRISIND,Balkrishna Industries Ltd.,success,consolidated,2026-09-15T12:13:13.584670,33 KB
+BALRAMCHIN,Balrampur Chini Mills Ltd.,success,consolidated,2026-09-15T12:13:34.250106,33 KB
+BANDHANBNK,Bandhan Bank Ltd.,success,auto,2026-09-15T15:00:37.538688,32 KB
+BANKBARODA,Bank of Baroda,success,consolidated,2026-09-15T12:14:32.271734,33 KB
+BANKINDIA,Bank of India,success,consolidated,2026-09-15T12:14:53.669948,33 KB
+MAHABANK,Bank of Maharashtra,success,consolidated,2026-09-15T12:15:15.315249,33 KB
+BATAINDIA,Bata India Ltd.,success,consolidated,2026-09-15T12:15:36.664332,32 KB
+BAYERCROP,Bayer Cropscience Ltd.,success,consolidated,2026-09-15T12:15:57.468360,30 KB
+BELRISE,Belrise Industries Ltd.,success,consolidated,2026-09-15T12:16:18.740008,32 KB
+BERGEPAINT,Berger Paints India Ltd.,success,consolidated,2026-09-15T12:16:40.178503,33 KB
+BDL,Bharat Dynamics Ltd.,success,auto,2026-09-15T15:00:59.018839,33 KB
+BEL,Bharat Electronics Ltd.,success,consolidated,2026-09-15T12:17:37.256688,33 KB
+BHARATFORG,Bharat Forge Ltd.,success,consolidated,2026-09-15T12:17:59.150215,33 KB
+BHEL,Bharat Heavy Electricals Ltd.,success,consolidated,2026-09-15T12:18:20.688771,33 KB
+BPCL,Bharat Petroleum Corporation Ltd.,success,consolidated,2026-09-15T12:18:42.314107,33 KB
+BHARTIARTL,Bharti Airtel Ltd.,success,consolidated,2026-09-15T12:19:03.412067,33 KB
+BHARTIHEXA,Bharti Hexacom Ltd.,failed,-,2026-09-15T15:01:36.189580,retry failed on all URL patterns
+BIKAJI,Bikaji Foods International Ltd.,success,consolidated,2026-09-15T12:20:00.336369,32 KB
+GROWW,Billionbrains Garage Ventures Ltd.,success,consolidated,2026-09-15T12:20:21.302385,31 KB
+BIOCON,Biocon Ltd.,success,consolidated,2026-09-15T12:20:42.786664,32 KB
+BSOFT,Birlasoft Ltd.,success,consolidated,2026-09-15T12:21:04.045424,33 KB
+BLUEDART,Blue Dart Express Ltd.,success,consolidated,2026-09-15T12:21:25.321321,32 KB
+BLUEJET,Blue Jet Healthcare Ltd.,success,consolidated,2026-09-15T12:21:46.178604,30 KB
+BLUESTARCO,Blue Star Ltd.,success,consolidated,2026-09-15T12:22:07.962949,33 KB
+BBTC,Bombay Burmah Trading Corporation Ltd.,success,consolidated,2026-09-15T12:22:29.485101,33 KB
+BOSCHLTD,Bosch Ltd.,success,consolidated,2026-09-15T12:22:50.940674,32 KB
+FIRSTCRY,Brainbees Solutions Ltd.,success,consolidated,2026-09-15T12:23:12.458195,32 KB
+BRIGADE,Brigade Enterprises Ltd.,success,consolidated,2026-09-15T12:23:33.910523,33 KB
+BRITANNIA,Britannia Industries Ltd.,success,consolidated,2026-09-15T12:23:55.329056,33 KB
+MAPMYINDIA,C.E. Info Systems Ltd.,success,consolidated,2026-09-15T12:24:16.475700,32 KB
+CCL,CCL Products (I) Ltd.,success,consolidated,2026-09-15T12:24:37.723470,33 KB
+CESC,CESC Ltd.,success,consolidated,2026-09-15T12:24:59.312765,33 KB
+CGPOWER,CG Power and Industrial Solutions Ltd.,success,consolidated,2026-09-15T12:25:20.116880,33 KB
+CIEINDIA,CIE Automotive India Ltd.,success,consolidated,2026-09-15T12:25:40.979536,33 KB
+CRISIL,CRISIL Ltd.,success,consolidated,2026-09-15T12:26:02.649937,32 KB
+CANFINHOME,Can Fin Homes Ltd.,success,auto,2026-09-15T15:01:57.852287,32 KB
+CANBK,Canara Bank,success,consolidated,2026-09-15T12:26:59.750665,33 KB
+CANHLIFE,Canara HSBC Life Insurance Company Ltd.,success,auto,2026-09-15T15:02:19.025713,31 KB
+CAPLIPOINT,Caplin Point Laboratories Ltd.,success,consolidated,2026-09-15T12:27:57.019166,33 KB
+CGCL,Capri Global Capital Ltd.,success,consolidated,2026-09-15T12:28:18.343533,32 KB
+CARBORUNIV,Carborundum Universal Ltd.,success,consolidated,2026-09-15T12:28:39.554693,33 KB
+CARTRADE,Cartrade Tech Ltd.,success,consolidated,2026-09-15T12:29:00.738256,32 KB
+CASTROLIND,Castrol India Ltd.,failed,-,2026-09-15T15:02:24.215656,retry failed on all URL patterns
+CEATLTD,Ceat Ltd.,success,consolidated,2026-09-15T12:29:58.573144,33 KB
+CEMPRO,Cemindia Projects Ltd.,success,consolidated,2026-09-15T12:30:20.384634,33 KB
+CENTRALBK,Central Bank of India,success,consolidated,2026-09-15T12:30:41.781078,32 KB
+CDSL,Central Depository Services (India) Ltd.,success,consolidated,2026-09-15T12:31:03.095871,32 KB
+CHALET,Chalet Hotels Ltd.,success,consolidated,2026-09-15T12:31:26.480548,33 KB
+CHAMBLFERT,Chambal Fertilizers & Chemicals Ltd.,success,consolidated,2026-09-15T12:31:47.970500,33 KB
+CHENNPETRO,Chennai Petroleum Corporation Ltd.,success,consolidated,2026-09-15T12:32:09.381311,33 KB
+CHOICEIN,Choice International Ltd.,success,consolidated,2026-09-15T12:32:30.816835,32 KB
+CHOLAHLDNG,Cholamandalam Financial Holdings Ltd.,success,consolidated,2026-09-15T12:32:52.202813,33 KB
+CHOLAFIN,Cholamandalam Investment and Finance Company Ltd.,success,consolidated,2026-09-15T12:33:13.485948,33 KB
+CIPLA,Cipla Ltd.,success,consolidated,2026-09-15T12:33:35.153643,33 KB
+CUB,City Union Bank Ltd.,success,auto,2026-09-15T15:02:45.558417,32 KB
+CLEAN,Clean Science and Technology Ltd.,success,consolidated,2026-09-15T12:34:32.580440,32 KB
+COALINDIA,Coal India Ltd.,success,consolidated,2026-09-15T12:34:53.725945,33 KB
+COCHINSHIP,Cochin Shipyard Ltd.,success,consolidated,2026-09-15T12:35:15.207929,33 KB
+COFORGE,Coforge Ltd.,success,consolidated,2026-09-15T12:35:36.697055,32 KB
+COHANCE,Cohance Lifesciences Ltd.,success,consolidated,2026-09-15T12:35:58.133364,32 KB
+COLPAL,Colgate Palmolive (India) Ltd.,success,consolidated,2026-09-15T12:36:19.199002,31 KB
+CAMS,Computer Age Management Services Ltd.,success,consolidated,2026-09-15T12:36:42.113323,32 KB
+CONCORDBIO,Concord Biotech Ltd.,success,consolidated,2026-09-15T12:37:04.762341,32 KB
+CONCOR,Container Corporation of India Ltd.,success,consolidated,2026-09-15T12:37:26.251238,33 KB
+COROMANDEL,Coromandel International Ltd.,success,consolidated,2026-09-15T12:37:47.412905,33 KB
+CRAFTSMAN,Craftsman Automation Ltd.,success,consolidated,2026-09-15T12:38:08.791278,33 KB
+CREDITACC,CreditAccess Grameen Ltd.,success,consolidated,2026-09-15T12:38:30.137181,32 KB
+CROMPTON,Crompton Greaves Consumer Electricals Ltd.,success,consolidated,2026-09-15T12:38:51.478029,33 KB
+CUMMINSIND,Cummins India Ltd.,success,consolidated,2026-09-15T12:39:12.841845,33 KB
+CYIENT,Cyient Ltd.,success,consolidated,2026-09-15T12:39:34.520581,32 KB
+DCMSHRIRAM,DCM Shriram Ltd.,success,consolidated,2026-09-15T12:39:56.019118,33 KB
+DLF,DLF Ltd.,success,consolidated,2026-09-15T12:40:17.215301,33 KB
+DOMS,DOMS Industries Ltd.,success,consolidated,2026-09-15T12:40:38.488150,32 KB
+DABUR,Dabur India Ltd.,success,consolidated,2026-09-15T12:40:59.980121,33 KB
+DALBHARAT,Dalmia Bharat Ltd.,success,consolidated,2026-09-15T12:41:21.390479,32 KB
+DATAPATTNS,Data Patterns (India) Ltd.,success,auto,2026-09-15T15:03:06.786123,32 KB
+DEEPAKFERT,Deepak Fertilisers & Petrochemicals Corp. Ltd.,success,consolidated,2026-09-15T12:42:18.520866,33 KB
+DEEPAKNTR,Deepak Nitrite Ltd.,success,consolidated,2026-09-15T12:42:40.057971,33 KB
+DELHIVERY,Delhivery Ltd.,success,consolidated,2026-09-15T12:43:01.303467,32 KB
+DEVYANI,Devyani International Ltd.,success,consolidated,2026-09-15T12:43:22.508129,32 KB
+DIVISLAB,Divi's Laboratories Ltd.,success,consolidated,2026-09-15T12:43:43.605270,32 KB
+DIXON,Dixon Technologies (India) Ltd.,success,consolidated,2026-09-15T12:44:04.989552,33 KB
+LALPATHLAB,Dr. Lal Path Labs Ltd.,success,consolidated,2026-09-15T12:44:25.323552,32 KB
+DRREDDY,Dr. Reddy's Laboratories Ltd.,success,consolidated,2026-09-15T12:44:45.682917,33 KB
+DUMMYHEG,Dummy HEG Ltd.,failed,-,2026-09-15T15:03:10.785986,retry failed on all URL patterns
+EIDPARRY,E.I.D. Parry (India) Ltd.,success,consolidated,2026-09-15T12:45:09.377748,33 KB
+EIHOTEL,EIH Ltd.,success,consolidated,2026-09-15T12:45:29.755449,33 KB
+EICHERMOT,Eicher Motors Ltd.,success,consolidated,2026-09-15T12:45:50.555078,33 KB
+ELECON,Elecon Engineering Co. Ltd.,success,consolidated,2026-09-15T12:46:10.939626,33 KB
+ELGIEQUIP,Elgi Equipments Ltd.,success,consolidated,2026-09-15T12:46:31.255143,32 KB
+EMAMILTD,Emami Ltd.,success,consolidated,2026-09-15T12:46:51.548546,33 KB
+EMCURE,Emcure Pharmaceuticals Ltd.,success,consolidated,2026-09-15T12:47:11.665832,32 KB
+EMMVEE,Emmvee Photovoltaic Power Ltd.,success,consolidated,2026-09-15T12:47:31.784891,32 KB
+ENDURANCE,Endurance Technologies Ltd.,success,consolidated,2026-09-15T12:47:52.032114,33 KB
+ENGINERSIN,Engineers India Ltd.,success,consolidated,2026-09-15T12:48:12.368793,32 KB
+ERIS,Eris Lifesciences Ltd.,success,consolidated,2026-09-15T12:48:32.753180,33 KB
+ESCORTS,Escorts Kubota Ltd.,success,consolidated,2026-09-15T12:48:53.033624,33 KB
+ETERNAL,Eternal Ltd.,success,consolidated,2026-09-15T12:49:13.281681,32 KB
+EXIDEIND,Exide Industries Ltd.,success,consolidated,2026-09-15T12:49:33.527464,33 KB
+NYKAA,FSN E-Commerce Ventures Ltd.,success,consolidated,2026-09-15T12:49:53.608599,32 KB
+FEDERALBNK,Federal Bank Ltd.,success,consolidated,2026-09-15T12:50:13.966290,33 KB
+FACT,Fertilisers and Chemicals Travancore Ltd.,success,consolidated,2026-09-15T12:50:34.170366,33 KB
+FINCABLES,Finolex Cables Ltd.,success,consolidated,2026-09-15T12:50:54.490353,33 KB
+FSL,Firstsource Solutions Ltd.,success,consolidated,2026-09-15T12:51:14.703920,32 KB
+FIVESTAR,Five-Star Business Finance Ltd.,success,consolidated,2026-09-15T12:51:34.666450,31 KB
+FORCEMOT,Force Motors Ltd.,success,consolidated,2026-09-15T12:51:54.919331,33 KB
+FORTIS,Fortis Healthcare Ltd.,success,consolidated,2026-09-15T12:52:15.300040,33 KB
+GAIL,GAIL (India) Ltd.,success,consolidated,2026-09-15T12:52:35.661064,33 KB
+GVT&D,GE Vernova T&D India Ltd.,success,consolidated,2026-09-15T12:52:55.491493,30 KB
+GMRAIRPORT,GMR Airports Ltd.,success,consolidated,2026-09-15T12:53:16.056598,33 KB
+GABRIEL,Gabriel India Ltd.,success,consolidated,2026-09-15T12:53:36.165220,31 KB
+GALLANTT,Gallantt Ispat Ltd.,success,consolidated,2026-09-15T12:53:56.347331,32 KB
+GRSE,Garden Reach Shipbuilders & Engineers Ltd.,failed,-,2026-09-15T15:03:47.610122,retry failed on all URL patterns
+GICRE,General Insurance Corporation of India,success,consolidated,2026-09-15T12:54:52.286868,32 KB
+GILLETTE,Gillette India Ltd.,success,auto,2026-09-15T15:04:08.547220,32 KB
+GLAND,Gland Pharma Ltd.,success,consolidated,2026-09-15T12:55:48.047541,32 KB
+GLAXO,Glaxosmithkline Pharmaceuticals Ltd.,success,consolidated,2026-09-15T12:56:08.408101,33 KB
+GLENMARK,Glenmark Pharmaceuticals Ltd.,success,consolidated,2026-09-15T12:56:28.722260,33 KB
+MEDANTA,Global Health Ltd.,success,consolidated,2026-09-15T12:56:48.866730,32 KB
+GODIGIT,Go Digit General Insurance Ltd.,success,auto,2026-09-15T15:04:30.857051,31 KB
+GPIL,Godawari Power & Ispat Ltd.,success,consolidated,2026-09-15T12:57:44.759983,33 KB
+GODFRYPHLP,Godfrey Phillips India Ltd.,success,consolidated,2026-09-15T12:58:05.102931,33 KB
+GODREJCP,Godrej Consumer Products Ltd.,success,consolidated,2026-09-15T12:58:25.360163,33 KB
+GODREJIND,Godrej Industries Ltd.,success,consolidated,2026-09-15T12:58:45.705481,33 KB
+GODREJPROP,Godrej Properties Ltd.,success,consolidated,2026-09-15T12:59:05.969786,33 KB
+GRANULES,Granules India Ltd.,success,consolidated,2026-09-15T12:59:26.193969,33 KB
+GRAPHITE,Graphite India Ltd.,success,consolidated,2026-09-15T12:59:46.587723,33 KB
+GRASIM,Grasim Industries Ltd.,success,consolidated,2026-09-15T13:00:06.992122,33 KB
+GRAVITA,Gravita India Ltd.,success,consolidated,2026-09-15T13:00:27.365127,32 KB
+GESHIP,Great Eastern Shipping Co. Ltd.,success,consolidated,2026-09-15T13:00:47.759204,33 KB
+FLUOROCHEM,Gujarat Fluorochemicals Ltd.,success,consolidated,2026-09-15T13:01:08.051945,32 KB
+GMDCLTD,Gujarat Mineral Development Corporation Ltd.,success,consolidated,2026-09-15T13:01:28.520831,33 KB
+HBLENGINE,HBL Engineering Ltd.,success,consolidated,2026-09-15T13:01:48.849985,32 KB
+HCLTECH,HCL Technologies Ltd.,success,consolidated,2026-09-15T13:02:09.142336,32 KB
+HDBFS,HDB Financial Services Ltd.,success,consolidated,2026-09-15T13:02:29.118711,31 KB
+HDFCAMC,HDFC Asset Management Company Ltd.,success,consolidated,2026-09-15T13:02:49.128355,31 KB
+HDFCBANK,HDFC Bank Ltd.,success,consolidated,2026-09-15T13:03:09.777151,33 KB
+HDFCLIFE,HDFC Life Insurance Company Ltd.,success,consolidated,2026-09-15T13:03:30.046797,32 KB
+HEG,HEG Ltd.,success,consolidated,2026-09-15T13:03:50.305743,33 KB
+HFCL,HFCL Ltd.,success,consolidated,2026-09-15T13:04:10.570671,33 KB
+HAVELLS,Havells India Ltd.,success,consolidated,2026-09-15T13:04:30.919503,33 KB
+HEROMOTOCO,Hero MotoCorp Ltd.,success,consolidated,2026-09-15T13:04:51.290116,33 KB
+HEXT,Hexaware Technologies Ltd.,success,consolidated,2026-09-15T13:05:11.603608,32 KB
+HSCL,Himadri Speciality Chemical Ltd.,success,consolidated,2026-09-15T13:05:32.004528,33 KB
+HINDALCO,Hindalco Industries Ltd.,success,consolidated,2026-09-15T13:05:52.645825,33 KB
+HAL,Hindustan Aeronautics Ltd.,success,consolidated,2026-09-15T13:06:12.969860,33 KB
+HINDCOPPER,Hindustan Copper Ltd.,success,consolidated,2026-09-15T13:06:33.401204,32 KB
+HINDPETRO,Hindustan Petroleum Corporation Ltd.,success,consolidated,2026-09-15T13:06:53.791298,33 KB
+HINDUNILVR,Hindustan Unilever Ltd.,success,consolidated,2026-09-15T13:07:14.010162,32 KB
+HINDZINC,Hindustan Zinc Ltd.,success,consolidated,2026-09-15T13:07:34.103996,32 KB
+POWERINDIA,Hitachi Energy India Ltd.,success,auto,2026-09-15T15:04:53.191447,32 KB
+HOMEFIRST,Home First Finance Company India Ltd.,success,auto,2026-09-15T15:05:15.191362,32 KB
+HONASA,Honasa Consumer Ltd.,success,consolidated,2026-09-15T13:09:05.536067,32 KB
+HONAUT,Honeywell Automation India Ltd.,failed,-,2026-09-15T15:05:52.430568,retry failed on all URL patterns
+HUDCO,Housing & Urban Development Corporation Ltd.,success,consolidated,2026-09-15T13:10:01.438886,32 KB
+HYUNDAI,Hyundai Motor India Ltd.,success,consolidated,2026-09-15T13:10:21.585191,32 KB
+ICICIBANK,ICICI Bank Ltd.,success,consolidated,2026-09-15T13:10:41.876741,33 KB
+ICICIGI,ICICI Lombard General Insurance Company Ltd.,success,auto,2026-09-15T15:06:13.604568,32 KB
+ICICIAMC,ICICI Prudential Asset Management Company Ltd.,success,consolidated,2026-09-15T13:11:37.596555,30 KB
+ICICIPRULI,ICICI Prudential Life Insurance Company Ltd.,success,consolidated,2026-09-15T13:11:58.060956,32 KB
+IDBI,IDBI Bank Ltd.,success,consolidated,2026-09-15T13:12:18.538347,33 KB
+IDFCFIRSTB,IDFC First Bank Ltd.,success,consolidated,2026-09-15T13:12:38.811761,33 KB
+IFCI,IFCI Ltd.,success,consolidated,2026-09-15T13:12:59.283670,33 KB
+IIFL,IIFL Finance Ltd.,success,consolidated,2026-09-15T13:13:19.600405,33 KB
+IRB,IRB Infrastructure Developers Ltd.,success,consolidated,2026-09-15T13:13:40.520713,33 KB
+IRCON,IRCON International Ltd.,success,consolidated,2026-09-15T13:14:00.892075,33 KB
+ITCHOTELS,ITC Hotels Ltd.,success,consolidated,2026-09-15T13:14:21.109599,31 KB
+ITC,ITC Ltd.,success,consolidated,2026-09-15T13:14:41.423528,33 KB
+ITI,ITI Ltd.,success,consolidated,2026-09-15T13:15:01.850179,32 KB
+INDGN,Indegene Ltd.,success,consolidated,2026-09-15T13:15:22.141354,32 KB
+INDIACEM,India Cements Ltd.,success,consolidated,2026-09-15T13:15:42.508155,33 KB
+INDIAMART,Indiamart Intermesh Ltd.,success,consolidated,2026-09-15T13:16:03.175781,32 KB
+INDIANB,Indian Bank,success,consolidated,2026-09-15T13:16:24.106269,33 KB
+IEX,Indian Energy Exchange Ltd.,success,consolidated,2026-09-15T13:16:44.297380,32 KB
+INDHOTEL,Indian Hotels Co. Ltd.,success,consolidated,2026-09-15T13:17:04.606587,33 KB
+IOC,Indian Oil Corporation Ltd.,success,consolidated,2026-09-15T13:17:24.873215,33 KB
+IOB,Indian Overseas Bank,success,consolidated,2026-09-15T13:17:44.980826,32 KB
+IRCTC,Indian Railway Catering And Tourism Corporation Ltd.,success,consolidated,2026-09-15T13:18:04.962725,31 KB
+IRFC,Indian Railway Finance Corporation Ltd.,success,auto,2026-09-15T15:06:34.935951,32 KB
+IREDA,Indian Renewable Energy Development Agency Ltd.,success,consolidated,2026-09-15T13:19:00.656942,32 KB
+IGL,Indraprastha Gas Ltd.,success,consolidated,2026-09-15T13:19:21.141883,33 KB
+INDUSTOWER,Indus Towers Ltd.,success,consolidated,2026-09-15T13:19:41.462186,32 KB
+INDUSINDBK,IndusInd Bank Ltd.,success,consolidated,2026-09-15T13:20:01.752205,33 KB
+NAUKRI,Info Edge (India) Ltd.,success,consolidated,2026-09-15T13:20:22.055312,33 KB
+INFY,Infosys Ltd.,success,consolidated,2026-09-15T13:20:42.386038,32 KB
+INOXWIND,Inox Wind Ltd.,success,consolidated,2026-09-15T13:21:02.797091,33 KB
+INTELLECT,Intellect Design Arena Ltd.,success,consolidated,2026-09-15T13:21:23.287269,32 KB
+INDIGO,InterGlobe Aviation Ltd.,success,consolidated,2026-09-15T13:21:43.585479,33 KB
+IGIL,International Gemological Institute Ltd.,success,consolidated,2026-09-15T13:22:03.619929,31 KB
+IKS,Inventurus Knowledge Solutions Ltd.,success,consolidated,2026-09-15T13:22:23.896704,32 KB
+IPCALAB,Ipca Laboratories Ltd.,success,consolidated,2026-09-15T13:22:44.104691,33 KB
+JKCEMENT,J.K. Cement Ltd.,success,consolidated,2026-09-15T13:23:04.443394,33 KB
+JBMA,JBM Auto Ltd.,success,consolidated,2026-09-15T13:23:24.902182,33 KB
+JKTYRE,JK Tyre & Industries Ltd.,success,consolidated,2026-09-15T13:23:45.290159,33 KB
+JMFINANCIL,JM Financial Ltd.,success,consolidated,2026-09-15T13:24:05.545433,33 KB
+JSWCEMENT,JSW Cement Ltd.,success,consolidated,2026-09-15T13:24:25.725855,32 KB
+JSWDULUX,JSW Dulux Ltd.,success,consolidated,2026-09-15T13:24:45.971805,32 KB
+JSWENERGY,JSW Energy Ltd.,success,consolidated,2026-09-15T13:25:06.467059,33 KB
+JSWINFRA,JSW Infrastructure Ltd.,success,consolidated,2026-09-15T13:25:26.797474,33 KB
+JSWSTEEL,JSW Steel Ltd.,success,consolidated,2026-09-15T13:25:47.229553,32 KB
+JAINREC,Jain Resource Recycling Ltd.,success,consolidated,2026-09-15T13:26:07.388577,31 KB
+JPPOWER,Jaiprakash Power Ventures Ltd.,success,consolidated,2026-09-15T13:26:27.677509,33 KB
+J&KBANK,Jammu & Kashmir Bank Ltd.,success,consolidated,2026-09-15T13:26:48.040688,32 KB
+JINDALSAW,Jindal Saw Ltd.,success,consolidated,2026-09-15T13:27:08.372472,33 KB
+JSL,Jindal Stainless Ltd.,success,consolidated,2026-09-15T13:27:29.000457,33 KB
+JINDALSTEL,Jindal Steel Ltd.,success,consolidated,2026-09-15T13:27:49.215675,33 KB
+JIOFIN,Jio Financial Services Ltd.,success,consolidated,2026-09-15T13:28:09.343063,31 KB
+JUBLFOOD,Jubilant Foodworks Ltd.,success,consolidated,2026-09-15T13:28:30.113033,33 KB
+JUBLINGREA,Jubilant Ingrevia Ltd.,success,consolidated,2026-09-15T13:28:50.328815,32 KB
+JUBLPHARMA,Jubilant Pharmova Ltd.,success,consolidated,2026-09-15T13:29:11.094994,33 KB
+JWL,Jupiter Wagons Ltd.,success,consolidated,2026-09-15T13:29:31.301834,32 KB
+JYOTICNC,Jyoti CNC Automation Ltd.,success,consolidated,2026-09-15T13:29:51.409406,32 KB
+KPRMILL,K.P.R. Mill Ltd.,success,consolidated,2026-09-15T13:30:11.790227,33 KB
+KEI,KEI Industries Ltd.,success,consolidated,2026-09-15T13:30:32.244751,33 KB
+KPITTECH,KPIT Technologies Ltd.,success,consolidated,2026-09-15T13:30:52.614812,32 KB
+KAJARIACER,Kajaria Ceramics Ltd.,success,consolidated,2026-09-15T13:31:12.966302,33 KB
+KPIL,Kalpataru Projects International Ltd.,success,consolidated,2026-09-15T13:31:33.503295,33 KB
+KALYANKJIL,Kalyan Jewellers India Ltd.,success,consolidated,2026-09-15T13:31:53.763084,32 KB
+KARURVYSYA,Karur Vysya Bank Ltd.,success,auto,2026-09-15T15:06:57.285862,32 KB
+KAYNES,Kaynes Technology India Ltd.,success,consolidated,2026-09-15T13:32:49.516954,32 KB
+KEC,Kec International Ltd.,success,consolidated,2026-09-15T13:33:09.772751,33 KB
+KFINTECH,Kfin Technologies Ltd.,success,consolidated,2026-09-15T13:33:30.044036,32 KB
+KIRLOSENG,Kirloskar Oil Eng Ltd.,success,consolidated,2026-09-15T13:33:50.304043,33 KB
+KOTAKBANK,Kotak Mahindra Bank Ltd.,success,consolidated,2026-09-15T13:34:10.703968,33 KB
+KIMS,Krishna Institute of Medical Sciences Ltd.,success,consolidated,2026-09-15T13:34:31.069008,32 KB
+LTF,L&T Finance Ltd.,success,consolidated,2026-09-15T13:34:51.444819,33 KB
+LTTS,L&T Technology Services Ltd.,success,consolidated,2026-09-15T13:35:11.643092,32 KB
+LGEINDIA,LG Electronics India Ltd.,success,auto,2026-09-15T15:07:19.490034,32 KB
+LICHSGFIN,LIC Housing Finance Ltd.,success,consolidated,2026-09-15T13:36:07.552523,33 KB
+LTFOODS,LT Foods Ltd.,success,consolidated,2026-09-15T13:36:27.999152,33 KB
+LTM,LTM Ltd.,success,consolidated,2026-09-15T13:36:48.412449,32 KB
+LT,Larsen & Toubro Ltd.,success,consolidated,2026-09-15T13:37:08.779764,33 KB
+LATENTVIEW,Latent View Analytics Ltd.,success,consolidated,2026-09-15T13:37:29.271370,32 KB
+LAURUSLABS,Laurus Labs Ltd.,success,consolidated,2026-09-15T13:37:49.560194,33 KB
+THELEELA,Leela Palaces Hotels & Resorts Ltd.,success,consolidated,2026-09-15T13:38:09.645091,31 KB
+LEMONTREE,Lemon Tree Hotels Ltd.,success,consolidated,2026-09-15T13:38:29.833200,32 KB
+LENSKART,Lenskart Solutions Ltd.,success,consolidated,2026-09-15T13:38:49.893065,32 KB
+LICI,Life Insurance Corporation of India,success,consolidated,2026-09-15T13:39:10.045401,32 KB
+LINDEINDIA,Linde India Ltd.,success,consolidated,2026-09-15T13:39:30.328066,33 KB
+LLOYDSME,Lloyds Metals And Energy Ltd.,success,consolidated,2026-09-15T13:39:50.689184,33 KB
+LODHA,Lodha Developers Ltd.,success,consolidated,2026-09-15T13:40:10.833388,32 KB
+LUPIN,Lupin Ltd.,success,consolidated,2026-09-15T13:40:31.096527,33 KB
+MMTC,MMTC Ltd.,success,consolidated,2026-09-15T13:40:51.349751,32 KB
+MRF,MRF Ltd.,success,consolidated,2026-09-15T13:41:11.772113,33 KB
+MGL,Mahanagar Gas Ltd.,success,consolidated,2026-09-15T13:41:31.761415,31 KB
+M&MFIN,Mahindra & Mahindra Financial Services Ltd.,success,consolidated,2026-09-15T13:41:52.080265,33 KB
+M&M,Mahindra & Mahindra Ltd.,success,consolidated,2026-09-15T13:42:12.621413,33 KB
+MANAPPURAM,Manappuram Finance Ltd.,success,consolidated,2026-09-15T13:42:32.879519,33 KB
+MRPL,Mangalore Refinery & Petrochemicals Ltd.,success,consolidated,2026-09-15T13:42:53.070673,33 KB
+MANKIND,Mankind Pharma Ltd.,success,consolidated,2026-09-15T13:43:13.251136,32 KB
+MARICO,Marico Ltd.,success,consolidated,2026-09-15T13:43:33.708683,32 KB
+MARUTI,Maruti Suzuki India Ltd.,success,consolidated,2026-09-15T13:43:54.247339,33 KB
+MFSL,Max Financial Services Ltd.,success,consolidated,2026-09-15T13:44:14.480359,32 KB
+MAXHEALTH,Max Healthcare Institute Ltd.,success,consolidated,2026-09-15T13:44:34.807138,33 KB
+MAZDOCK,Mazagoan Dock Shipbuilders Ltd.,success,consolidated,2026-09-15T13:44:55.079176,33 KB
+MEESHO,Meesho Ltd.,success,consolidated,2026-09-15T13:45:15.088494,31 KB
+MINDACORP,Minda Corporation Ltd.,success,consolidated,2026-09-15T13:45:35.309237,32 KB
+MSUMI,Motherson Sumi Wiring India Ltd.,success,auto,2026-09-15T15:07:41.600523,32 KB
+MOTILALOFS,Motilal Oswal Financial Services Ltd.,success,consolidated,2026-09-15T13:46:31.363733,33 KB
+MPHASIS,MphasiS Ltd.,success,consolidated,2026-09-15T13:46:51.655377,33 KB
+MCX,Multi Commodity Exchange of India Ltd.,success,consolidated,2026-09-15T13:47:12.082770,32 KB
+MUTHOOTFIN,Muthoot Finance Ltd.,success,consolidated,2026-09-15T13:47:32.413631,33 KB
+NATCOPHARM,NATCO Pharma Ltd.,success,consolidated,2026-09-15T13:47:52.803972,32 KB
+NBCC,NBCC (India) Ltd.,success,consolidated,2026-09-15T13:48:13.021632,33 KB
+NCC,NCC Ltd.,success,consolidated,2026-09-15T13:48:33.392562,33 KB
+NHPC,NHPC Ltd.,success,consolidated,2026-09-15T13:48:53.700504,33 KB
+NLCINDIA,NLC India Ltd.,success,consolidated,2026-09-15T13:49:14.106348,33 KB
+NMDC,NMDC Ltd.,success,consolidated,2026-09-15T13:49:34.341745,33 KB
+NSLNISP,NMDC Steel Ltd.,success,auto,2026-09-15T15:08:03.361478,32 KB
+NTPCGREEN,NTPC Green Energy Ltd.,success,consolidated,2026-09-15T13:50:30.269587,31 KB
+NTPC,NTPC Ltd.,success,consolidated,2026-09-15T13:50:50.648489,33 KB
+NH,Narayana Hrudayalaya Ltd.,success,consolidated,2026-09-15T13:51:10.968314,33 KB
+NATIONALUM,National Aluminium Co. Ltd.,success,consolidated,2026-09-15T13:51:31.404379,33 KB
+NAVA,Nava Ltd.,success,consolidated,2026-09-15T13:51:51.668756,33 KB
+NAVINFLUOR,Navin Fluorine International Ltd.,success,consolidated,2026-09-15T13:52:12.095422,33 KB
+NESTLEIND,Nestle India Ltd.,success,consolidated,2026-09-15T13:52:32.085102,31 KB
+NETWEB,Netweb Technologies India Ltd.,success,auto,2026-09-15T15:08:25.718505,32 KB
+NEULANDLAB,Neuland Laboratories Ltd.,success,consolidated,2026-09-15T13:53:28.060484,33 KB
+NEWGEN,Newgen Software Technologies Ltd.,success,consolidated,2026-09-15T13:53:48.463025,32 KB
+NAM-INDIA,Nippon Life India Asset Management Ltd.,success,consolidated,2026-09-15T13:54:08.813340,32 KB
+NIVABUPA,Niva Bupa Health Insurance Company Ltd.,failed,-,2026-09-15T15:09:02.658781,retry failed on all URL patterns
+NUVAMA,Nuvama Wealth Management Ltd.,success,consolidated,2026-09-15T13:55:04.628590,32 KB
+NUVOCO,Nuvoco Vistas Corporation Ltd.,success,consolidated,2026-09-15T13:55:24.843480,33 KB
+OBEROIRLTY,Oberoi Realty Ltd.,success,consolidated,2026-09-15T13:55:45.272067,33 KB
+ONGC,Oil & Natural Gas Corporation Ltd.,success,consolidated,2026-09-15T13:56:05.730267,33 KB
+OIL,Oil India Ltd.,success,consolidated,2026-09-15T13:56:26.197515,33 KB
+OLAELEC,Ola Electric Mobility Ltd.,success,consolidated,2026-09-15T13:56:46.370654,32 KB
+OLECTRA,Olectra Greentech Ltd.,success,consolidated,2026-09-15T13:57:06.706231,32 KB
+PAYTM,One 97 Communications Ltd.,success,consolidated,2026-09-15T13:57:26.974906,32 KB
+ONESOURCE,Onesource Specialty Pharma Ltd.,success,consolidated,2026-09-15T13:57:46.970974,32 KB
+OFSS,Oracle Financial Services Software Ltd.,success,consolidated,2026-09-15T13:58:07.293158,32 KB
+POLICYBZR,PB Fintech Ltd.,success,consolidated,2026-09-15T13:58:27.375688,32 KB
+PCBL,PCBL Chemical Ltd.,success,consolidated,2026-09-15T13:58:47.778609,33 KB
+PGEL,PG Electroplast Ltd.,success,consolidated,2026-09-15T13:59:07.932802,32 KB
+PIIND,PI Industries Ltd.,success,consolidated,2026-09-15T13:59:28.374490,32 KB
+PNBHOUSING,PNB Housing Finance Ltd.,success,consolidated,2026-09-15T13:59:48.566761,32 KB
+PTCIL,PTC Industries Ltd.,success,consolidated,2026-09-15T14:00:08.801822,32 KB
+PVRINOX,PVR INOX Ltd.,success,consolidated,2026-09-15T14:00:29.135527,32 KB
+PAGEIND,Page Industries Ltd.,success,auto,2026-09-15T15:09:25.125675,33 KB
+PARADEEP,Paradeep Phosphates Ltd.,success,consolidated,2026-09-15T14:01:24.805104,32 KB
+PATANJALI,Patanjali Foods Ltd.,success,consolidated,2026-09-15T14:01:45.055404,33 KB
+PERSISTENT,Persistent Systems Ltd.,success,consolidated,2026-09-15T14:02:05.483864,33 KB
+PETRONET,Petronet LNG Ltd.,success,consolidated,2026-09-15T14:02:25.863394,33 KB
+PFIZER,Pfizer Ltd.,success,consolidated,2026-09-15T14:02:45.849183,31 KB
+PHOENIXLTD,Phoenix Mills Ltd.,success,consolidated,2026-09-15T14:03:06.196261,33 KB
+PWL,Physicswallah Ltd.,success,consolidated,2026-09-15T14:03:26.257485,31 KB
+PIDILITIND,Pidilite Industries Ltd.,success,consolidated,2026-09-15T14:03:46.634721,33 KB
+PINELABS,Pine Labs Ltd.,success,consolidated,2026-09-15T14:04:06.860268,32 KB
+PIRAMALFIN,Piramal Finance Ltd.,success,consolidated,2026-09-15T14:04:27.104554,33 KB
+PPLPHARMA,Piramal Pharma Ltd.,success,consolidated,2026-09-15T14:04:47.320822,32 KB
+POLYMED,Poly Medicure Ltd.,success,consolidated,2026-09-15T14:05:07.598850,33 KB
+POLYCAB,Polycab India Ltd.,success,consolidated,2026-09-15T14:05:27.949492,33 KB
+POONAWALLA,Poonawalla Fincorp Ltd.,success,consolidated,2026-09-15T14:05:48.436424,33 KB
+PFC,Power Finance Corporation Ltd.,success,consolidated,2026-09-15T14:06:08.724760,33 KB
+POWERGRID,Power Grid Corporation of India Ltd.,success,consolidated,2026-09-15T14:06:29.070924,33 KB
+PREMIERENE,Premier Energies Ltd.,success,consolidated,2026-09-15T14:06:49.315618,32 KB
+PRESTIGE,Prestige Estates Projects Ltd.,success,consolidated,2026-09-15T14:07:09.653489,32 KB
+PFOCUS,Prime Focus Ltd.,success,consolidated,2026-09-15T14:07:29.949477,32 KB
+PNB,Punjab National Bank,success,consolidated,2026-09-15T14:07:50.228975,33 KB
+RRKABEL,R R Kabel Ltd.,success,consolidated,2026-09-15T14:08:10.469333,32 KB
+RBLBANK,RBL Bank Ltd.,success,consolidated,2026-09-15T14:08:30.697265,33 KB
+RECLTD,REC Ltd.,success,consolidated,2026-09-15T14:08:50.869536,33 KB
+RHIM,RHI MAGNESITA INDIA LTD.,success,consolidated,2026-09-15T14:09:11.131334,32 KB
+RITES,RITES Ltd.,success,consolidated,2026-09-15T14:09:31.451045,33 KB
+RADICO,Radico Khaitan Ltd,success,consolidated,2026-09-15T14:09:51.841489,33 KB
+RVNL,Rail Vikas Nigam Ltd.,success,consolidated,2026-09-15T14:10:12.137151,33 KB
+RAILTEL,Railtel Corporation Of India Ltd.,success,consolidated,2026-09-15T14:10:32.320021,32 KB
+RAINBOW,Rainbow Childrens Medicare Ltd.,success,consolidated,2026-09-15T14:10:52.479268,32 KB
+RKFORGE,Ramkrishna Forgings Ltd.,success,consolidated,2026-09-15T14:11:12.797944,33 KB
+REDINGTON,Redington Ltd.,success,consolidated,2026-09-15T14:11:33.096370,33 KB
+RELIANCE,Reliance Industries Ltd.,success,consolidated,2026-09-15T14:11:53.477424,33 KB
+RPOWER,Reliance Power Ltd.,success,consolidated,2026-09-15T14:12:13.799326,33 KB
+SBFC,SBFC Finance Ltd.,success,consolidated,2026-09-15T14:12:33.896164,31 KB
+SBICARD,SBI Cards and Payment Services Ltd.,failed,-,2026-09-15T15:10:02.293812,retry failed on all URL patterns
+SBILIFE,SBI Life Insurance Company Ltd.,failed,-,2026-09-15T15:10:39.186079,retry failed on all URL patterns
+SJVN,SJVN Ltd.,success,consolidated,2026-09-15T14:14:05.707774,33 KB
+SRF,SRF Ltd.,success,consolidated,2026-09-15T14:14:26.040862,33 KB
+SAGILITY,Sagility Ltd.,success,consolidated,2026-09-15T14:14:46.245937,32 KB
+SAILIFE,Sai Life Sciences Ltd.,success,consolidated,2026-09-15T14:15:06.421252,32 KB
+SAMMAANCAP,Sammaan Capital Ltd.,success,consolidated,2026-09-15T14:15:26.662454,33 KB
+MOTHERSON,Samvardhana Motherson International Ltd.,success,consolidated,2026-09-15T14:15:47.025158,33 KB
+SAPPHIRE,Sapphire Foods India Ltd.,success,consolidated,2026-09-15T14:16:07.372549,32 KB
+SARDAEN,Sarda Energy and Minerals Ltd.,success,consolidated,2026-09-15T14:16:27.867218,33 KB
+SAREGAMA,Saregama India Ltd,success,consolidated,2026-09-15T14:16:48.312196,32 KB
+SCHAEFFLER,Schaeffler India Ltd.,success,consolidated,2026-09-15T14:17:08.478702,31 KB
+SCHNEIDER,Schneider Electric Infrastructure Ltd.,success,auto,2026-09-15T15:11:01.455223,32 KB
+SCI,Shipping Corporation of India Ltd.,success,consolidated,2026-09-15T14:18:04.362041,33 KB
+SHREECEM,Shree Cement Ltd.,success,consolidated,2026-09-15T14:18:24.855919,33 KB
+SHRIRAMFIN,Shriram Finance Ltd.,success,consolidated,2026-09-15T14:18:45.248645,33 KB
+SHYAMMETL,Shyam Metalics and Energy Ltd.,success,consolidated,2026-09-15T14:19:05.463186,33 KB
+ENRIN,Siemens Energy India Ltd.,success,auto,2026-09-15T15:11:23.373984,31 KB
+SIEMENS,Siemens Ltd.,success,consolidated,2026-09-15T14:20:01.294244,32 KB
+SIGNATURE,Signatureglobal (India) Ltd.,success,consolidated,2026-09-15T14:20:21.422904,32 KB
+SOBHA,Sobha Ltd.,success,consolidated,2026-09-15T14:20:41.814955,33 KB
+SOLARINDS,Solar Industries India Ltd.,success,consolidated,2026-09-15T14:21:02.278573,33 KB
+SONACOMS,Sona BLW Precision Forgings Ltd.,success,consolidated,2026-09-15T14:21:22.565808,33 KB
+SONATSOFTW,Sonata Software Ltd.,success,consolidated,2026-09-15T14:21:42.898875,33 KB
+STARHEALTH,Star Health and Allied Insurance Company Ltd.,failed,-,2026-09-15T15:12:00.196468,retry failed on all URL patterns
+SBIN,State Bank of India,success,consolidated,2026-09-15T14:22:38.809604,33 KB
+SAIL,Steel Authority of India Ltd.,success,consolidated,2026-09-15T14:22:59.170804,33 KB
+SUMICHEM,Sumitomo Chemical India Ltd.,success,consolidated,2026-09-15T14:23:19.468452,32 KB
+SUNPHARMA,Sun Pharmaceutical Industries Ltd.,success,consolidated,2026-09-15T14:23:39.864836,33 KB
+SUNTV,Sun TV Network Ltd.,success,consolidated,2026-09-15T14:24:00.157084,32 KB
+SUNDARMFIN,Sundaram Finance Ltd.,success,consolidated,2026-09-15T14:24:20.325097,33 KB
+SUPREMEIND,Supreme Industries Ltd.,success,consolidated,2026-09-15T14:24:40.628757,33 KB
+SPLPETRO,Supreme Petrochem Ltd.,success,consolidated,2026-09-15T14:25:00.688673,31 KB
+SUZLON,Suzlon Energy Ltd.,success,consolidated,2026-09-15T14:25:21.079494,33 KB
+SWANCORP,Swan Corp Ltd.,success,consolidated,2026-09-15T14:25:41.514661,33 KB
+SWIGGY,Swiggy Ltd.,success,consolidated,2026-09-15T14:26:01.489585,32 KB
+SYNGENE,Syngene International Ltd.,success,consolidated,2026-09-15T14:26:21.777731,32 KB
+SYRMA,Syrma SGS Technology Ltd.,success,consolidated,2026-09-15T14:26:41.986993,32 KB
+TBOTEK,TBO Tek Ltd.,success,consolidated,2026-09-15T14:27:02.267657,32 KB
+TVSMOTOR,TVS Motor Company Ltd.,success,consolidated,2026-09-15T14:27:22.613827,33 KB
+TATACAP,Tata Capital Ltd.,success,consolidated,2026-09-15T14:27:42.700600,32 KB
+TATACHEM,Tata Chemicals Ltd.,success,consolidated,2026-09-15T14:28:02.938703,33 KB
+TATACOMM,Tata Communications Ltd.,success,consolidated,2026-09-15T14:28:23.306471,33 KB
+TCS,Tata Consultancy Services Ltd.,success,consolidated,2026-09-15T14:28:43.643100,32 KB
+TATACONSUM,Tata Consumer Products Ltd.,success,consolidated,2026-09-15T14:29:03.935761,33 KB
+TATAELXSI,Tata Elxsi Ltd.,success,consolidated,2026-09-15T14:29:24.086353,32 KB
+TATAINVEST,Tata Investment Corporation Ltd.,success,consolidated,2026-09-15T14:29:44.415491,32 KB
+TMCV,Tata Motors Ltd.,success,consolidated,2026-09-15T14:30:04.318989,31 KB
+TMPV,Tata Motors Passenger Vehicles Ltd.,success,consolidated,2026-09-15T14:30:24.707141,33 KB
+TATAPOWER,Tata Power Co. Ltd.,success,consolidated,2026-09-15T14:30:45.048517,33 KB
+TATASTEEL,Tata Steel Ltd.,success,consolidated,2026-09-15T14:31:05.484944,33 KB
+TATATECH,Tata Technologies Ltd.,success,consolidated,2026-09-15T14:31:25.774946,32 KB
+TTML,Tata Teleservices (Maharashtra) Ltd.,success,consolidated,2026-09-15T14:31:45.878537,31 KB
+TECHM,Tech Mahindra Ltd.,success,consolidated,2026-09-15T14:32:06.209575,32 KB
+TECHNOE,Techno Electric & Engineering Company Ltd.,success,consolidated,2026-09-15T14:32:26.529714,32 KB
+TEGA,Tega Industries Ltd.,success,consolidated,2026-09-15T14:32:46.841439,32 KB
+TEJASNET,Tejas Networks Ltd.,success,consolidated,2026-09-15T14:33:07.158679,33 KB
+TENNIND,Tenneco Clean Air India Ltd.,success,consolidated,2026-09-15T14:33:27.277116,31 KB
+NIACL,The New India Assurance Company Ltd.,success,consolidated,2026-09-15T14:33:47.549843,32 KB
+RAMCOCEM,The Ramco Cements Ltd.,success,consolidated,2026-09-15T14:34:07.896980,33 KB
+THERMAX,Thermax Ltd.,success,consolidated,2026-09-15T14:34:28.428723,33 KB
+TIMKEN,Timken India Ltd.,success,consolidated,2026-09-15T14:34:48.467395,31 KB
+TITAGARH,Titagarh Rail Systems Ltd.,success,consolidated,2026-09-15T14:35:08.886065,33 KB
+TITAN,Titan Company Ltd.,success,consolidated,2026-09-15T14:35:29.341470,32 KB
+TORNTPHARM,Torrent Pharmaceuticals Ltd.,success,consolidated,2026-09-15T14:35:49.686649,33 KB
+TORNTPOWER,Torrent Power Ltd.,success,consolidated,2026-09-15T14:36:10.081476,33 KB
+TARIL,Transformers And Rectifiers (India) Ltd.,success,consolidated,2026-09-15T14:36:30.506372,32 KB
+TRAVELFOOD,Travel Food Services Ltd.,success,consolidated,2026-09-15T14:36:50.722939,32 KB
+TRENT,Trent Ltd.,success,consolidated,2026-09-15T14:37:10.943050,33 KB
+TRIDENT,Trident Ltd.,success,consolidated,2026-09-15T14:37:31.377738,33 KB
+TRITURBINE,Triveni Turbine Ltd.,success,consolidated,2026-09-15T14:37:51.808217,32 KB
+TIINDIA,Tube Investments of India Ltd.,success,consolidated,2026-09-15T14:38:12.188224,33 KB
+UCOBANK,UCO Bank,success,consolidated,2026-09-15T14:38:32.193029,32 KB
+UNOMINDA,UNO Minda Ltd.,success,consolidated,2026-09-15T14:38:52.520579,33 KB
+UPL,UPL Ltd.,success,consolidated,2026-09-15T14:39:12.845261,32 KB
+UTIAMC,UTI Asset Management Company Ltd.,success,consolidated,2026-09-15T14:39:33.146569,32 KB
+ULTRACEMCO,UltraTech Cement Ltd.,success,consolidated,2026-09-15T14:39:53.619237,33 KB
+UNIONBANK,Union Bank of India,success,consolidated,2026-09-15T14:40:14.016223,33 KB
+UBL,United Breweries Ltd.,success,consolidated,2026-09-15T14:40:34.371868,33 KB
+UNITDSPR,United Spirits Ltd.,success,consolidated,2026-09-15T14:40:54.726275,32 KB
+URBANCO,Urban Company Ltd.,success,consolidated,2026-09-15T14:41:14.890861,32 KB
+USHAMART,Usha Martin Ltd.,success,consolidated,2026-09-15T14:41:35.203864,33 KB
+VTL,Vardhman Textiles Ltd.,success,consolidated,2026-09-15T14:41:55.681679,33 KB
+VBL,Varun Beverages Ltd.,success,consolidated,2026-09-15T14:42:16.007305,33 KB
+VEDL,Vedanta Ltd.,success,consolidated,2026-09-15T14:42:36.330786,32 KB
+VIJAYA,Vijaya Diagnostic Centre Ltd.,success,consolidated,2026-09-15T14:42:56.575634,32 KB
+VMM,Vishal Mega Mart Ltd.,success,consolidated,2026-09-15T14:43:16.671057,32 KB
+IDEA,Vodafone Idea Ltd.,success,consolidated,2026-09-15T14:43:36.950060,33 KB
+VOLTAS,Voltas Ltd.,success,consolidated,2026-09-15T14:43:57.312472,33 KB
+WAAREEENER,Waaree Energies Ltd.,success,consolidated,2026-09-15T14:44:17.471421,32 KB
+WELCORP,Welspun Corp Ltd.,success,consolidated,2026-09-15T14:44:37.766026,33 KB
+WELSPUNLIV,Welspun Living Ltd.,success,consolidated,2026-09-15T14:44:58.195060,33 KB
+WHIRLPOOL,Whirlpool of India Ltd.,success,consolidated,2026-09-15T14:45:18.409813,32 KB
+WIPRO,Wipro Ltd.,success,consolidated,2026-09-15T14:45:38.768184,33 KB
+WOCKPHARMA,Wockhardt Ltd.,success,consolidated,2026-09-15T14:45:59.101257,32 KB
+YESBANK,Yes Bank Ltd.,success,consolidated,2026-09-15T14:46:19.486781,33 KB
+ZFCVINDIA,ZF Commercial Vehicle Control Systems India Ltd.,success,consolidated,2026-09-15T14:46:39.581102,32 KB
+ZEEL,Zee Entertainment Enterprises Ltd.,success,consolidated,2026-09-15T14:46:59.968078,32 KB
+ZENTEC,Zen Technologies Ltd.,success,consolidated,2026-09-15T14:47:20.345566,32 KB
+ZENSARTECH,Zensar Technolgies Ltd.,success,consolidated,2026-09-15T14:47:40.654937,32 KB
+ZYDUSLIFE,Zydus Lifesciences Ltd.,success,consolidated,2026-09-15T14:48:00.891110,32 KB
+ZYDUSWELL,Zydus Wellness Ltd.,success,consolidated,2026-09-15T14:48:21.233940,32 KB
+ECLERX,eClerx Services Ltd.,success,consolidated,2026-09-15T14:48:41.585607,32 KB
