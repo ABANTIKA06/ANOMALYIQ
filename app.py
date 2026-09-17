@@ -108,8 +108,8 @@ def get_theme_config(theme=None):
         paper_bgcolor="rgba(0,0,0,0)",
         plot_bgcolor="rgba(0,0,0,0)",
         font=dict(family="Inter, sans-serif", color=text_main, size=12),
-        xaxis=dict(gridcolor=grid_color, linecolor=border, tickfont=dict(color=text_dim)),
-        yaxis=dict(gridcolor=grid_color, linecolor=border, tickfont=dict(color=text_dim)),
+        xaxis=dict(gridcolor=grid_color, linecolor=border, tickfont=dict(color=text_dim), autorange=True, automargin=True),
+        yaxis=dict(gridcolor=grid_color, linecolor=border, tickfont=dict(color=text_dim), autorange=True, automargin=True),
         legend=dict(bgcolor="rgba(0,0,0,0)", font=dict(color=text_dim)),
         margin=dict(l=20, r=20, t=40, b=20),
     )
@@ -1007,6 +1007,55 @@ def layout_methodology(cfg):
                     ),
                 ],
                 style={"display": "flex", "gap": "16px", "marginBottom": "24px"}
+            ),
+
+            # Anomaly Score Definition & Constraints Card
+            card(
+                [
+                    html.H5("⚡ What is the Anomaly Score & What Are Its Constraints?", style={"color": cfg["text_main"], "fontWeight": "700", "marginBottom": "12px"}),
+                    html.P(
+                        "The Anomaly Score is an unsupervised machine learning metric derived from Isolation Forest path lengths. "
+                        "Instead of evaluating a single ratio in isolation, it evaluates multi-dimensional interaction across Accruals, "
+                        "Leverage Growth, Operating Margins, and Volatility simultaneously relative to industry peers.",
+                        style={"color": cfg["text_dim"], "fontSize": "13.5px", "lineHeight": "1.6", "marginBottom": "14px"}
+                    ),
+                    html.Div(
+                        [
+                            html.H6("🔍 Score Interpretation Breakdown:", style={"color": cfg["text_main"], "fontWeight": "700", "fontSize": "13px", "marginBottom": "10px"}),
+                            html.Div([
+                                html.Span("🟢 ", style={"fontSize": "12px"}),
+                                html.B("0.00 – 0.15 (Normal Baseline): "),
+                                html.Span("Standard accounting trajectory. Financial statements align closely with sector norms.")
+                            ], style={"marginBottom": "8px", "color": cfg["text_main"], "fontSize": "13px"}),
+                            html.Div([
+                                html.Span("🟡 ", style={"fontSize": "12px"}),
+                                html.B("0.15 – 0.20 (Watchlist Risk): "),
+                                html.Span("Moderate statistical divergence. Indicates emerging accrual gaps or accelerating leverage.")
+                            ], style={"marginBottom": "8px", "color": cfg["text_main"], "fontSize": "13px"}),
+                            html.Div([
+                                html.Span("🔴 ", style={"fontSize": "12px"}),
+                                html.B("> 0.20 (Flagged Anomaly Outlier): "),
+                                html.Span("High multivariate deviation. Represents extreme financial outliers requiring immediate forensic audit.")
+                            ], style={"marginBottom": "0", "color": cfg["text_main"], "fontSize": "13px"}),
+                        ],
+                        style={"background": cfg["bg_page"], "padding": "16px", "borderRadius": "6px", "border": f"1px solid {cfg['border']}", "marginBottom": "16px"}
+                    ),
+                    html.Div(
+                        [
+                            html.H6("📌 Constraints & Analytical Boundaries:", style={"color": cfg["text_main"], "fontWeight": "700", "fontSize": "13px", "marginBottom": "8px"}),
+                            html.Ul(
+                                [
+                                    html.Li([html.B("Bounded Domain [0.0, 1.0]: "), "Scores are normalized between 0.0 (perfect baseline) and 1.0 (extreme anomaly). For Nifty 500 companies, practical outlier scores peak around 0.45 – 0.55."]),
+                                    html.Li([html.B("Industry-Relative Evaluation: "), "A company is evaluated relative to its specific sector peers (e.g., IT services accruals vs Real Estate leverage), ensuring sector-specific accounting norms do not distort scores."]),
+                                    html.Li([html.B("Statistical Outlier ≠ Fraud Proof: "), "The Isolation Forest detects mathematical abnormality. High scores flag company-years needing deep accounting review, not definitive proof of illegality."]),
+                                ],
+                                style={"color": cfg["text_dim"], "fontSize": "13px", "lineHeight": "1.5", "paddingLeft": "18px", "margin": "0"}
+                            )
+                        ]
+                    ),
+                ],
+                style={"marginBottom": "24px"},
+                theme_cfg=cfg,
             ),
 
             # Machine Learning Section
