@@ -4,7 +4,7 @@ An end-to-end Machine Learning anomaly detection system and interactive Plotly D
 
 ---
 
-## 📁 Standalone Project Folder Structure (`StockAnalysis/ANOMALYIQ/`)
+## 📁 Standalone Project Folder Structure (`ANOMALY-IQ/`)
 
 ```
 StockAnalysis/
@@ -67,21 +67,3 @@ StockAnalysis/
    - `04 METHODOLOGY`: Financial theory breakdown (Sloan's Accruals, Debt YoY, Isolation Forest math).
 
 ---
-
-## 🚀 Quick Start
-
-### 1. Navigate to Project Subfolder
-```powershell
-cd ANOMALYIQ
-```
-
-### 2. Install Dependencies
-```powershell
-pip install -r requirements.txt
-```
-
-### 3. Launch Dashboard
-```powershell
-python app.py
-```
-Open your browser at `http://127.0.0.1:8050` to interact with the dashboard.
