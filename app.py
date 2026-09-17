@@ -86,6 +86,8 @@ HIGH_CONTRAST_PALETTE = [
 
 
 def get_theme_config(theme="light"):
+    if not theme or theme not in ("light", "dark"):
+        theme = "light"
     is_dark = (theme == "dark")
     bg_page      = "#0B0C10" if is_dark else "#F4F3EF"
     card_bg      = "#14171F" if is_dark else "#FFFFFF"
@@ -1257,6 +1259,12 @@ def update_industry_charts(industries, score_threshold, theme):
 )
 def update_scatter(x_col, y_col, col_mode, industries, year_range, theme):
     cfg = get_theme_config(theme)
+    if not x_col or x_col not in anomaly_df.columns:
+        x_col = "Accruals_Ratio"
+    if not y_col or y_col not in anomaly_df.columns:
+        y_col = "Leverage_Change_YoY"
+    if not col_mode:
+        col_mode = "score"
     df = anomaly_df.copy()
     if industries:
         df = df[df["Industry"].isin(industries)]
