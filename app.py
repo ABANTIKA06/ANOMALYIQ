@@ -85,26 +85,23 @@ HIGH_CONTRAST_PALETTE = [
 ]
 
 
-def get_theme_config(theme="light"):
-    if not theme or theme not in ("light", "dark"):
-        theme = "light"
-    is_dark = (theme == "dark")
-    bg_page      = "#0B0C10" if is_dark else "#F4F3EF"
-    card_bg      = "#14171F" if is_dark else "#FFFFFF"
-    border       = "#242936" if is_dark else "#E2DFD6"
-    text_main    = "#F8F9FA" if is_dark else "#111111"
-    text_dim     = "#A0AAB8" if is_dark else "#666666"
-    grid_color   = "#1E2330" if is_dark else "#EAE7DE"
-    accent_red   = "#FF4D4D" if is_dark else "#E53926"
-    accent_blue  = "#3A86FF" if is_dark else "#1D3557"
-    accent_teal  = "#00F5D4" if is_dark else "#2A9D8F"
-    accent_gold  = "#FFBE0B" if is_dark else "#F4A261"
+def get_theme_config(theme=None):
+    bg_page      = "#F4F3EF"
+    card_bg      = "#FFFFFF"
+    border       = "#E2DFD6"
+    text_main    = "#111111"
+    text_dim     = "#666666"
+    grid_color   = "#EAE7DE"
+    accent_red   = "#E53926"
+    accent_blue  = "#1D3557"
+    accent_teal  = "#2A9D8F"
+    accent_gold  = "#F4A261"
 
     colorscale = [
-        [0.00, "#3A86FF" if is_dark else "#1D3557"],
-        [0.35, "#00F5D4" if is_dark else "#2A9D8F"],
-        [0.65, "#FFBE0B" if is_dark else "#F4A261"],
-        [1.00, "#FF4D4D" if is_dark else "#E53926"],
+        [0.00, "#1D3557"],
+        [0.35, "#2A9D8F"],
+        [0.65, "#F4A261"],
+        [1.00, "#E53926"],
     ]
 
     layout = dict(
@@ -118,8 +115,8 @@ def get_theme_config(theme="light"):
     )
 
     return {
-        "theme": theme,
-        "is_dark": is_dark,
+        "theme": "light",
+        "is_dark": False,
         "bg_page": bg_page,
         "card_bg": card_bg,
         "border": border,
@@ -240,8 +237,6 @@ server = app.server  # Exposed Flask server for production WSGI deployment
 app.layout = html.Div(
     [
         dcc.Location(id="url", refresh=False),
-        dcc.Store(id="theme-store", storage_type="local", data="light"),
-        html.Div(id="theme-dummy-output", style={"display": "none"}),
         html.Div(id="app-container"),
     ]
 )
@@ -536,24 +531,8 @@ app.index_string = """
 
 
 # ─────────────────────────────────────────────
-# 4. THEME SWITCHING CALLBACKS
+# 4. PAGE HEADERS & NAVBAR BUILDERS
 # ─────────────────────────────────────────────
-
-@app.callback(
-    Output("theme-store", "data"),
-    Input("theme-toggle-btn", "n_clicks"),
-    State("theme-store", "data"),
-    prevent_initial_call=True,
-)
-def toggle_theme_store(n_clicks, current_theme):
-    return "dark" if current_theme == "light" else "light"
-
-
-app.clientside_callback(
-    dash.ClientsideFunction(namespace="clientside", function_name="toggleTheme"),
-    Output("theme-dummy-output", "children"),
-    Input("theme-store", "data"),
-)
 
 
 # ─────────────────────────────────────────────
@@ -1081,14 +1060,9 @@ def layout_methodology(cfg):
     Output("app-container", "style"),
     Output("app-container", "className"),
     Input("url", "pathname"),
-    Input("theme-store", "data"),
 )
-def render_app_container(pathname, theme):
-    cfg = get_theme_config(theme)
-
-    btn_text = "🌙 DARK MODE" if theme == "light" else "☀️ LIGHT MODE"
-    btn_bg   = cfg["card_bg"]
-    btn_fg   = cfg["text_main"]
+def render_app_container(pathname):
+    cfg = get_theme_config()
 
     navbar = html.Div(
         [
@@ -1108,27 +1082,10 @@ def render_app_container(pathname, theme):
                                              "color": cfg["text_dim"], "display": "block", "marginTop": "2px", "fontWeight": "600"}),
                         ]
                     ),
-                    # Nav links right & theme button
+                    # Nav links right
                     html.Div(
                         [
                             render_navbar_links(pathname, cfg),
-                            html.Button(
-                                btn_text,
-                                id="theme-toggle-btn",
-                                n_clicks=0,
-                                style={
-                                    "background": btn_bg,
-                                    "color": btn_fg,
-                                    "border": f"1px solid {cfg['border']}",
-                                    "borderRadius": "20px",
-                                    "padding": "6px 16px",
-                                    "fontSize": "11px",
-                                    "fontWeight": "700",
-                                    "cursor": "pointer",
-                                    "letterSpacing": "0.5px",
-                                    "transition": "all 0.2s ease",
-                                },
-                            ),
                         ],
                         className="navbar-right",
                         style={"display": "flex", "gap": "24px", "alignItems": "center"},
@@ -1213,10 +1170,9 @@ def _filter_industry_df(industries, score_threshold):
     Output("chart-year-trend", "figure"),
     Input("ind-filter", "value"),
     Input("score-threshold", "value"),
-    Input("theme-store", "data"),
 )
-def update_industry_charts(industries, score_threshold, theme):
-    cfg = get_theme_config(theme)
+def update_industry_charts(industries, score_threshold):
+    cfg = get_theme_config()
     df = _filter_industry_df(industries, score_threshold)
 
     # --- Chart 1: Anomaly rate by industry ---
@@ -1324,10 +1280,9 @@ def update_industry_charts(industries, score_threshold, theme):
     Input("scatter-colmode", "value"),
     Input("scatter-industry", "value"),
     Input("scatter-years", "value"),
-    Input("theme-store", "data"),
 )
-def update_scatter(x_col, y_col, col_mode, industries, year_range, theme):
-    cfg = get_theme_config(theme)
+def update_scatter(x_col, y_col, col_mode, industries, year_range):
+    cfg = get_theme_config()
     if not x_col or x_col not in anomaly_df.columns:
         x_col = "Accruals_Ratio"
     if not y_col or y_col not in anomaly_df.columns:
@@ -1489,10 +1444,9 @@ def update_scatter(x_col, y_col, col_mode, industries, year_range, theme):
     Output("chart-debt", "figure"),
     Output("chart-anomaly-timeline", "figure"),
     Input("company-select", "value"),
-    Input("theme-store", "data"),
 )
-def update_company(company, theme):
-    cfg = get_theme_config(theme)
+def update_company(company):
+    cfg = get_theme_config()
     if not company:
         empty = go.Figure()
         empty.update_layout(**cfg["layout"])
