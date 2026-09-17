@@ -1122,7 +1122,25 @@ def render_app_container(pathname):
         [
             html.Div(page_layout, id="page-content", className="page-content-wrapper", style={"maxWidth": "1400px", "margin": "0 auto", "padding": "36px 24px"}),
         ],
-        style={"background": cfg["bg_page"], "minHeight": "calc(100vh - 76px)"},
+        style={"background": cfg["bg_page"], "minHeight": "calc(100vh - 150px)"},
+    )
+
+    footer = html.Footer(
+        [
+            html.Div(
+                [
+                    html.Span("MADE BY ", style={"color": cfg["text_dim"], "fontSize": "11px", "letterSpacing": "1px", "fontWeight": "600"}),
+                    html.Span("ABANTIKA SAHA ROY", style={"color": cfg["accent_red"], "fontSize": "12px", "letterSpacing": "1.5px", "fontWeight": "700", "fontFamily": "'Space Grotesk', sans-serif"}),
+                ],
+                style={"maxWidth": "1400px", "margin": "0 auto", "display": "flex", "alignItems": "center", "justifyContent": "center", "padding": "20px 24px", "gap": "6px"}
+            )
+        ],
+        style={
+            "background": cfg["card_bg"],
+            "borderTop": f"1px solid {cfg['border']}",
+            "marginTop": "40px",
+            "textAlign": "center",
+        }
     )
 
     container_style = {
@@ -1132,9 +1150,9 @@ def render_app_container(pathname):
         "fontFamily": "'Inter', sans-serif",
     }
 
-    container_className = "dark-theme" if theme == "dark" else "light-theme"
+    container_className = "light-theme"
 
-    return [navbar, content], container_style, container_className
+    return [navbar, content, footer], container_style, container_className
 
 
 # ─────────────────────────────────────────────
