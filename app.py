@@ -443,6 +443,70 @@ app.index_string = """
         }
         .light-theme .rc-slider-mark-text { color: #666666 !important; }
         .dark-theme  .rc-slider-mark-text { color: #A0AAB8 !important; }
+
+        /* ── RESPONSIVE STYLING (MOBILE & TABLET) ── */
+        .table-responsive-wrapper {
+            width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .kpi-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .responsive-flex-row {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+
+        @media (max-width: 992px) {
+            .kpi-grid {
+                grid-template-columns: repeat(2, 1fr) !important;
+            }
+            .responsive-flex-row {
+                flex-direction: column !important;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .kpi-grid {
+                grid-template-columns: 1fr !important;
+            }
+            .navbar-container-box {
+                height: auto !important;
+                padding: 12px 0 !important;
+            }
+            .navbar-inner {
+                flex-direction: column !important;
+                align-items: flex-start !important;
+                gap: 14px !important;
+                padding: 0 16px !important;
+            }
+            .navbar-right {
+                width: 100% !important;
+                justify-content: space-between !important;
+                gap: 12px !important;
+                flex-wrap: wrap !important;
+            }
+            .nav-links-box {
+                flex-wrap: wrap !important;
+                gap: 12px !important;
+            }
+            .page-header-box {
+                flex-direction: column !important;
+                align-items: flex-start !important;
+                gap: 12px !important;
+                margin-bottom: 24px !important;
+            }
+            .page-content-wrapper {
+                padding: 18px 12px !important;
+            }
+        }
     </style>
     <script>
         window.dash_clientside = Object.assign({}, window.dash_clientside, {
@@ -527,6 +591,7 @@ def render_navbar_links(pathname, cfg):
             dcc.Link("03  COMPANY DEEP DIVE", href="/company", style=get_link_style("/company")),
             dcc.Link("04  METHODOLOGY", href="/methodology", style=get_link_style("/methodology")),
         ],
+        className="nav-links-box",
         style={"display": "flex", "gap": "28px", "alignItems": "center"}
     )
 
@@ -556,6 +621,7 @@ def page_header(section_num, title, subtitle, cfg):
                        "borderRadius": "20px", "display": "flex", "alignItems": "center"}
             )
         ],
+        className="page-header-box",
         style={"display": "flex", "justifyContent": "space-between", "alignItems": "flex-end",
                "marginBottom": "36px", "borderBottom": f"1px solid {cfg['border']}", "paddingBottom": "24px"}
     )
@@ -578,7 +644,7 @@ def layout_industry(cfg):
                     stat_card("Industries Covered", "kpi-industries", "🏭", cfg["accent_teal"], "Sectoral breakdown derived from Screen.in / NSE classifications.", "tt-kpi-ind", theme_cfg=cfg),
                     stat_card("Years of Data", "kpi-years", "📅", cfg["accent_gold"], "Historical financial panel dataset spanning FY2015 to FY2024.", "tt-kpi-years", theme_cfg=cfg),
                 ],
-                style={"display": "grid", "gridTemplateColumns": "repeat(4, 1fr)", "gap": "16px", "marginBottom": "24px"},
+                className="kpi-grid",
             ),
 
             # Filter bar
@@ -612,7 +678,7 @@ def layout_industry(cfg):
                             style={"flex": "1"},
                         ),
                     ],
-                    style={"display": "flex", "gap": "32px", "alignItems": "flex-start"},
+                    className="responsive-flex-row",
                 ),
                 style={"marginBottom": "24px"},
                 theme_cfg=cfg,
@@ -624,7 +690,7 @@ def layout_industry(cfg):
                     card(
                         [
                             html.H6(["Anomaly Rate by Industry", info_icon("tt-h-rate", "Percentage of company-years within each industry flagged as financial outliers.", theme_cfg=cfg)],
-                                    style={"color": cfg["text_main"], "fontSize": "13px", "fontWeight": "700", "letterSpacing": "0.5px", "textTransform": "uppercase", "marginBottom": "16px", "display": "flex", "alignItems": "center"}),
+                                     style={"color": cfg["text_main"], "fontSize": "13px", "fontWeight": "700", "letterSpacing": "0.5px", "textTransform": "uppercase", "marginBottom": "16px", "display": "flex", "alignItems": "center"}),
                             dcc.Graph(id="chart-anomaly-rate", config={"displayModeBar": False}),
                         ],
                         style={"flex": "1"},
@@ -633,14 +699,14 @@ def layout_industry(cfg):
                     card(
                         [
                             html.H6(["Anomaly Score Distribution", info_icon("tt-h-dist", "Box plot displaying score range, median, and outliers across sectors.", theme_cfg=cfg)],
-                                    style={"color": cfg["text_main"], "fontSize": "13px", "fontWeight": "700", "letterSpacing": "0.5px", "textTransform": "uppercase", "marginBottom": "16px", "display": "flex", "alignItems": "center"}),
+                                     style={"color": cfg["text_main"], "fontSize": "13px", "fontWeight": "700", "letterSpacing": "0.5px", "textTransform": "uppercase", "marginBottom": "16px", "display": "flex", "alignItems": "center"}),
                             dcc.Graph(id="chart-score-dist", config={"displayModeBar": False}),
                         ],
                         style={"flex": "1"},
                         theme_cfg=cfg,
                     ),
                 ],
-                style={"display": "flex", "gap": "16px", "marginBottom": "16px"},
+                className="responsive-flex-row",
             ),
 
             # Charts row 2
@@ -834,8 +900,7 @@ def layout_company(cfg):
             ),
 
             # KPI row
-            html.Div(id="company-kpis",
-                     style={"display": "grid", "gridTemplateColumns": "repeat(4, 1fr)", "gap": "16px", "marginBottom": "20px"}),
+            html.Div(id="company-kpis", className="kpi-grid"),
 
             # Charts
             html.Div(
@@ -859,7 +924,8 @@ def layout_company(cfg):
                         theme_cfg=cfg,
                     ),
                 ],
-                style={"display": "flex", "gap": "16px", "marginBottom": "16px"},
+                className="responsive-flex-row",
+                style={"marginBottom": "16px"},
             ),
 
             html.Div(
@@ -1064,13 +1130,16 @@ def render_app_container(pathname, theme):
                                 },
                             ),
                         ],
+                        className="navbar-right",
                         style={"display": "flex", "gap": "24px", "alignItems": "center"},
                     ),
                 ],
+                className="navbar-inner",
                 style={"maxWidth": "1400px", "margin": "0 auto", "display": "flex",
                        "justifyContent": "space-between", "alignItems": "center", "padding": "0 24px"},
             )
         ],
+        className="navbar-container-box",
         style={
             "height": "76px",
             "background": cfg["bg_page"],
@@ -1094,7 +1163,7 @@ def render_app_container(pathname, theme):
 
     content = html.Div(
         [
-            html.Div(page_layout, id="page-content", style={"maxWidth": "1400px", "margin": "0 auto", "padding": "36px 24px"}),
+            html.Div(page_layout, id="page-content", className="page-content-wrapper", style={"maxWidth": "1400px", "margin": "0 auto", "padding": "36px 24px"}),
         ],
         style={"background": cfg["bg_page"], "minHeight": "calc(100vh - 76px)"},
     )
@@ -1405,7 +1474,7 @@ def update_scatter(x_col, y_col, col_mode, industries, year_range, theme):
         ],
         style={"width": "100%", "borderCollapse": "collapse"},
     )
-    return fig, table
+    return fig, html.Div(table, className="table-responsive-wrapper")
 
 
 # ─────────────────────────────────────────────
