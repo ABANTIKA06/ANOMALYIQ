@@ -108,8 +108,8 @@ def get_theme_config(theme=None):
         paper_bgcolor="rgba(0,0,0,0)",
         plot_bgcolor="rgba(0,0,0,0)",
         font=dict(family="Inter, sans-serif", color=text_main, size=12),
-        xaxis=dict(gridcolor=grid_color, linecolor=border, tickfont=dict(color=text_dim), autorange=True, automargin=True),
-        yaxis=dict(gridcolor=grid_color, linecolor=border, tickfont=dict(color=text_dim), autorange=True, automargin=True),
+        xaxis=dict(gridcolor=grid_color, linecolor=border, tickfont=dict(color=text_dim), automargin=True),
+        yaxis=dict(gridcolor=grid_color, linecolor=border, tickfont=dict(color=text_dim), automargin=True),
         legend=dict(bgcolor="rgba(0,0,0,0)", font=dict(color=text_dim)),
         margin=dict(l=20, r=20, t=40, b=20),
     )
@@ -130,6 +130,84 @@ def get_theme_config(theme=None):
         "colorscale": colorscale,
         "layout": layout,
     }
+
+
+def auto_scale_fig(fig, x_vals=None, y_vals=None, is_year_x=False, is_category_x=False, is_category_y=False):
+    """
+    Ensures X and Y axes auto-scale with generous margin padding so single-year 
+    or narrow data distributions never collapse into squished vertical/horizontal lines.
+    """
+    if x_vals is not None and len(x_vals) > 0:
+        if is_year_x:
+            valid_x = []
+            for v in x_vals:
+                if pd.notna(v):
+                    try:
+                        valid_x.append(int(v))
+                    except (ValueError, TypeError):
+                        pass
+            if valid_x:
+                x_min, x_max = min(valid_x), max(valid_x)
+                if x_min == x_max:
+                    fig.update_xaxes(range=[x_min - 0.8, x_max + 0.8], dtick=1, tickformat="d")
+                else:
+                    fig.update_xaxes(range=[x_min - 0.5, x_max + 0.5], dtick=1 if (x_max - x_min) <= 12 else None, tickformat="d")
+        elif is_category_x:
+            cats = list(dict.fromkeys([str(v) for v in x_vals if pd.notna(v)]))
+            n_cats = len(cats)
+            if n_cats == 1:
+                fig.update_xaxes(range=[-1.0, 1.0], type="category")
+            elif n_cats > 1:
+                fig.update_xaxes(range=[-0.5, n_cats - 0.5], type="category")
+        else:
+            valid_x = []
+            for v in x_vals:
+                if pd.notna(v):
+                    try:
+                        val = float(v)
+                        if np.isfinite(val):
+                            valid_x.append(val)
+                    except (ValueError, TypeError):
+                        pass
+            if valid_x:
+                x_min, x_max = min(valid_x), max(valid_x)
+                if x_min == x_max:
+                    delta = abs(x_min) * 0.1 if x_min != 0 else 1.0
+                    fig.update_xaxes(range=[x_min - delta, x_max + delta])
+                else:
+                    span = x_max - x_min
+                    fig.update_xaxes(range=[x_min - span * 0.05, x_max + span * 0.05])
+
+    if y_vals is not None and len(y_vals) > 0:
+        if is_category_y:
+            cats = list(dict.fromkeys([str(v) for v in y_vals if pd.notna(v)]))
+            n_cats = len(cats)
+            if n_cats == 1:
+                fig.update_yaxes(range=[-1.0, 1.0], type="category")
+            elif n_cats > 1:
+                fig.update_yaxes(range=[-0.5, n_cats - 0.5], type="category")
+        else:
+            valid_y = []
+            for v in y_vals:
+                if pd.notna(v):
+                    try:
+                        val = float(v)
+                        if np.isfinite(val):
+                            valid_y.append(val)
+                    except (ValueError, TypeError):
+                        pass
+            if valid_y:
+                y_min, y_max = min(valid_y), max(valid_y)
+                if y_min == y_max:
+                    delta = abs(y_min) * 0.1 if y_min != 0 else 1.0
+                    fig.update_yaxes(range=[y_min - delta, y_max + delta])
+                else:
+                    span = y_max - y_min
+                    pad_bottom = span * 0.05 if y_min >= 0 else span * 0.05
+                    fig.update_yaxes(range=[y_min - pad_bottom, y_max + span * 0.05])
+
+    return fig
+
 
 
 def card(children, className="", style=None, theme_cfg=None):
@@ -1267,6 +1345,7 @@ def update_industry_charts(industries, score_threshold):
         textfont=dict(color=cfg["text_dim"], size=11, family="Inter, sans-serif"),
     ))
     fig1.update_layout(**cfg["layout"], height=380, xaxis_title="Anomaly Rate (%)", yaxis_title="")
+    auto_scale_fig(fig1, y_vals=grp["Industry"], x_vals=grp["rate"], is_category_x=False, is_category_y=True)
 
     # --- Chart 2: Score distribution ---
     top_ind = (df.groupby("Industry")["Anomaly_Score"].median()
@@ -1281,6 +1360,7 @@ def update_industry_charts(industries, score_threshold):
     fig2.update_traces(marker_color=cfg["accent_red"], marker_size=6,
                        line_color=cfg["accent_blue"],
                        fillcolor="rgba(58,134,255,0.15)" if cfg["is_dark"] else "rgba(29,53,87,0.15)")
+    auto_scale_fig(fig2, x_vals=df2["Industry"], y_vals=df2["Anomaly_Score"], is_category_x=True)
 
     # --- Chart 3: Avg operating margin ---
     margin_grp = (anomaly_df.dropna(subset=["Operating_Margin"])
@@ -1302,6 +1382,7 @@ def update_industry_charts(industries, score_threshold):
         textfont=dict(color=cfg["text_dim"], size=11),
     ))
     fig3.update_layout(**cfg["layout"], height=380, xaxis_title="Avg Operating Margin (%)", yaxis_title="")
+    auto_scale_fig(fig3, y_vals=margin_grp["Industry"], x_vals=margin_grp["Operating_Margin"] * 100, is_category_y=True)
 
     # --- Chart 4: Anomaly trend ---
     year_grp = df.groupby("Year").agg(
@@ -1312,14 +1393,14 @@ def update_industry_charts(industries, score_threshold):
 
     fig4 = go.Figure()
     fig4.add_trace(go.Scatter(
-        x=year_grp["Year"].astype(str), y=year_grp["anomalies"],
+        x=year_grp["Year"], y=year_grp["anomalies"],
         name="# Anomalies", mode="lines+markers",
         line=dict(color=cfg["accent_red"], width=3),
         marker=dict(size=8, color=cfg["accent_red"], symbol="circle", line=dict(width=1.5, color=line_outline)),
         fill="tozeroy", fillcolor="rgba(255,77,77,0.12)" if cfg["is_dark"] else "rgba(229,57,38,0.08)",
     ))
     fig4.add_trace(go.Scatter(
-        x=year_grp["Year"].astype(str), y=year_grp["rate"],
+        x=year_grp["Year"], y=year_grp["rate"],
         name="Rate (%)", mode="lines+markers",
         line=dict(color=cfg["accent_blue"], width=2.5, dash="dot"),
         marker=dict(size=7, color=cfg["accent_blue"], symbol="diamond", line=dict(width=1.5, color=line_outline)),
@@ -1332,6 +1413,7 @@ def update_industry_charts(industries, score_threshold):
                     tickfont=dict(color=cfg["text_dim"])),
     )
     fig4.update_layout(legend=dict(orientation="h", y=1.12, bgcolor="rgba(0,0,0,0)", font=dict(color=cfg["text_dim"])))
+    auto_scale_fig(fig4, x_vals=year_grp["Year"], y_vals=year_grp["anomalies"].tolist() + year_grp["rate"].tolist(), is_year_x=True)
     return fig1, fig2, fig3, fig4
 
 
@@ -1448,6 +1530,7 @@ def update_scatter(x_col, y_col, col_mode, industries, year_range):
         hovermode="closest",
     )
     fig.update_layout(legend=dict(orientation="h", y=1.06, bgcolor="rgba(0,0,0,0)", font=dict(color=cfg["text_dim"])))
+    auto_scale_fig(fig, x_vals=df[x_col], y_vals=df[y_col])
 
     # Table styling for Dark / Light mode
     top20 = (anomaly_df[anomaly_df["Is_Anomaly"] == 1]
@@ -1519,18 +1602,18 @@ def update_company(company):
         empty.update_layout(**cfg["layout"])
         return [], [], empty, empty, empty, empty
 
-    cdf   = merged_df[merged_df["Company"] == company].sort_values("Year")
-    adf   = anomaly_df[anomaly_df["Company"] == company].sort_values("Year")
-    years = cdf["Year"].astype(str).tolist()
+    cdf       = merged_df[merged_df["Company"] == company].sort_values("Year")
+    adf       = anomaly_df[anomaly_df["Company"] == company].sort_values("Year")
+    years_num = cdf["Year"].dropna().astype(int).tolist()
 
-    anomaly_years = adf[adf["Is_Anomaly"] == 1]["Year"].tolist()
+    anomaly_years = adf[adf["Is_Anomaly"] == 1]["Year"].dropna().astype(int).tolist()
 
     shapes = []
     for y in anomaly_years:
         shapes.append(dict(
             type="rect",
             xref="x", yref="paper",
-            x0=str(int(y) - 0.4), x1=str(int(y) + 0.4),
+            x0=float(y) - 0.4, x1=float(y) + 0.4,
             y0=0, y1=1,
             fillcolor="rgba(255,77,77,0.15)" if cfg["is_dark"] else "rgba(229,57,38,0.08)",
             line_width=0,
@@ -1586,39 +1669,50 @@ def update_company(company):
 
     # Revenue chart
     fig_rev = go.Figure()
+    rev_y = []
     if "Sales" in cdf.columns:
-        fig_rev.add_trace(go.Bar(x=years, y=cdf["Sales"], name="Revenue", marker_color=cfg["accent_blue"]))
+        fig_rev.add_trace(go.Bar(x=years_num, y=cdf["Sales"], name="Revenue", marker_color=cfg["accent_blue"]))
+        rev_y.extend(cdf["Sales"].dropna().tolist())
     if "Net profit" in cdf.columns:
-        fig_rev.add_trace(go.Scatter(x=years, y=cdf["Net profit"], name="Net Profit", mode="lines+markers",
+        fig_rev.add_trace(go.Scatter(x=years_num, y=cdf["Net profit"], name="Net Profit", mode="lines+markers",
                                       line=dict(color=cfg["accent_red"], width=2.5),
                                       marker=dict(size=7, color=cfg["accent_red"])))
+        rev_y.extend(cdf["Net profit"].dropna().tolist())
     fig_rev.update_layout(**common)
+    auto_scale_fig(fig_rev, x_vals=years_num, y_vals=rev_y, is_year_x=True)
 
     # Cashflow chart
     fig_cf = go.Figure()
+    cf_y = []
     if "Cash from Operating Activity" in cdf.columns:
-        fig_cf.add_trace(go.Scatter(x=years, y=cdf["Cash from Operating Activity"], name="Operating Cash Flow",
+        fig_cf.add_trace(go.Scatter(x=years_num, y=cdf["Cash from Operating Activity"], name="Operating Cash Flow",
                                      mode="lines+markers", line=dict(color=cfg["accent_teal"], width=2.5),
                                      marker=dict(size=7, color=cfg["accent_teal"]),
                                      fill="tozeroy", fillcolor="rgba(0,245,212,0.1)" if cfg["is_dark"] else "rgba(42,157,143,0.08)"))
+        cf_y.extend(cdf["Cash from Operating Activity"].dropna().tolist())
     if "Net profit" in cdf.columns:
-        fig_cf.add_trace(go.Scatter(x=years, y=cdf["Net profit"], name="Net Profit", mode="lines+markers",
+        fig_cf.add_trace(go.Scatter(x=years_num, y=cdf["Net profit"], name="Net Profit", mode="lines+markers",
                                      line=dict(color=cfg["accent_red"], width=2, dash="dot"),
                                      marker=dict(size=7, color=cfg["accent_red"])))
+        cf_y.extend(cdf["Net profit"].dropna().tolist())
     fig_cf.update_layout(**common)
+    auto_scale_fig(fig_cf, x_vals=years_num, y_vals=cf_y, is_year_x=True)
 
     # Debt chart
     fig_debt = go.Figure()
+    debt_y = []
     if "Borrowings" in cdf.columns:
         fig_debt.add_trace(go.Bar(
-            x=years, y=cdf["Borrowings"], name="Borrowings",
+            x=years_num, y=cdf["Borrowings"], name="Borrowings",
             marker=dict(
                 color=cdf["Borrowings"],
                 colorscale=[[0, "rgba(58,134,255,0.7)" if cfg["is_dark"] else "rgba(29,53,87,0.7)"], [1, cfg["accent_red"]]],
                 showscale=False,
             ),
         ))
+        debt_y.extend(cdf["Borrowings"].dropna().tolist())
     fig_debt.update_layout(**common)
+    auto_scale_fig(fig_debt, x_vals=years_num, y_vals=debt_y, is_year_x=True)
 
     # Anomaly timeline chart
     fig_anom = go.Figure()
@@ -1626,8 +1720,9 @@ def update_company(company):
                        annotation_text="Anomaly Threshold",
                        annotation_font_color=cfg["accent_red"],
                        annotation_position="bottom right")
+    anom_years_num = adf["Year"].dropna().astype(int).tolist()
     fig_anom.add_trace(go.Scatter(
-        x=adf["Year"].astype(str), y=adf["Anomaly_Score"],
+        x=anom_years_num, y=adf["Anomaly_Score"],
         name="Anomaly Score", mode="lines+markers",
         line=dict(color=cfg["accent_blue"], width=2.5),
         marker=dict(
@@ -1639,6 +1734,7 @@ def update_company(company):
     ))
     common_no_shapes = {k: v for k, v in common.items() if k != "shapes"}
     fig_anom.update_layout(**common_no_shapes)
+    auto_scale_fig(fig_anom, x_vals=anom_years_num, y_vals=adf["Anomaly_Score"], is_year_x=True)
 
     return badges, kpis, fig_rev, fig_cf, fig_debt, fig_anom
 
