@@ -546,6 +546,36 @@ app.index_string = """
             }
         }
 
+        .hamburger-menu-btn:hover {
+            border-color: #E53926 !important;
+            color: #E53926 !important;
+            box-shadow: 0 2px 10px rgba(229,57,38,0.15) !important;
+        }
+
+        .offcanvas {
+            background-color: #F4F3EF !important;
+            color: #111111 !important;
+            border-left: 1px solid #E2DFD6 !important;
+            box-shadow: -4px 0 24px rgba(0,0,0,0.12) !important;
+        }
+
+        .offcanvas-header {
+            border-bottom: 1px solid #E2DFD6 !important;
+            padding: 18px 24px !important;
+        }
+
+        .offcanvas-title {
+            font-family: 'Space Grotesk', sans-serif !important;
+            font-weight: 700 !important;
+            font-size: 15px !important;
+            letter-spacing: 0.5px !important;
+        }
+
+        .nav-card-item:hover {
+            transform: translateX(-4px) !important;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06) !important;
+        }
+
         @media (max-width: 768px) {
             .kpi-grid {
                 grid-template-columns: 1fr !important;
@@ -555,20 +585,19 @@ app.index_string = """
                 padding: 12px 0 !important;
             }
             .navbar-inner {
-                flex-direction: column !important;
-                align-items: flex-start !important;
+                flex-direction: row !important;
+                align-items: center !important;
+                justify-content: space-between !important;
                 gap: 14px !important;
                 padding: 0 16px !important;
             }
             .navbar-right {
-                width: 100% !important;
-                justify-content: space-between !important;
+                width: auto !important;
+                justify-content: flex-end !important;
                 gap: 12px !important;
-                flex-wrap: wrap !important;
             }
-            .nav-links-box {
-                flex-wrap: wrap !important;
-                gap: 12px !important;
+            .active-page-pill {
+                display: none !important;
             }
             .page-header-box {
                 flex-direction: column !important;
@@ -618,38 +647,144 @@ app.index_string = """
 # ─────────────────────────────────────────────
 
 def render_navbar_links(pathname, cfg):
-    def get_link_style(path):
-        is_active = (pathname == path) or (path == "/industry" and pathname in ("/", "", "/industry", "/industry/"))
-        if is_active:
-            return {
-                "color": cfg["text_main"],
-                "borderBottom": f"2.5px solid {cfg['accent_red']}",
-                "fontWeight": "700",
-                "paddingBottom": "4px",
-                "textDecoration": "none",
-                "fontSize": "12px",
-                "letterSpacing": "0.5px",
-            }
-        else:
-            return {
-                "color": cfg["text_dim"],
-                "borderBottom": "2.5px solid transparent",
-                "fontWeight": "500",
-                "paddingBottom": "4px",
-                "textDecoration": "none",
-                "fontSize": "12px",
-                "letterSpacing": "0.5px",
-            }
+    nav_items = [
+        {"num": "01", "name": "INDUSTRY OVERVIEW", "href": "/industry", "icon": "🏭", "sub": "Sector-wide financial health & anomaly rates"},
+        {"num": "02", "name": "ANOMALY EXPLORER", "href": "/anomaly", "icon": "🎯", "sub": "Multi-dimensional risk canvas & top outliers"},
+        {"num": "03", "name": "COMPANY DEEP DIVE", "href": "/company", "icon": "📈", "sub": "10-year longitudinal financial health analysis"},
+        {"num": "04", "name": "METHODOLOGY", "href": "/methodology", "icon": "🧮", "sub": "Unsupervised ML theory, Sloan's anomaly & constraints"},
+    ]
+
+    active_item = nav_items[0]
+    for item in nav_items:
+        if (pathname == item["href"]) or (item["href"] == "/industry" and pathname in ("/", "", "/industry", "/industry/")):
+            active_item = item
+            break
+
+    offcanvas_children = [
+        html.Div(
+            [
+                html.Span("NAVIGATION MODULES", style={"fontSize": "11px", "fontWeight": "700", "color": cfg["accent_red"], "letterSpacing": "1px"}),
+                html.P("Select any module to navigate the financial intelligence dashboard:", style={"fontSize": "12.5px", "color": cfg["text_dim"], "marginTop": "4px", "marginBottom": "20px"}),
+            ]
+        )
+    ]
+
+    card_links = []
+    for item in nav_items:
+        is_active = (active_item["href"] == item["href"])
+        
+        card_style = {
+            "background": "rgba(229,57,38,0.06)" if is_active else cfg["card_bg"],
+            "border": f"1px solid {cfg['accent_red']}" if is_active else f"1px solid {cfg['border']}",
+            "borderRadius": "8px",
+            "padding": "16px 18px",
+            "marginBottom": "14px",
+            "display": "block",
+            "textDecoration": "none",
+            "transition": "all 0.2s ease",
+            "borderLeft": f"4px solid {cfg['accent_red']}" if is_active else f"1px solid {cfg['border']}",
+        }
+
+        badge = html.Span("CURRENT VIEW", style={"background": cfg["accent_red"], "color": "#FFFFFF", "fontSize": "9px", "fontWeight": "700", "padding": "2px 8px", "borderRadius": "10px", "letterSpacing": "0.5px"}) if is_active else None
+
+        card_links.append(
+            dcc.Link(
+                html.Div(
+                    [
+                        html.Div(
+                            [
+                                html.Span(f"{item['icon']}  {item['num']} {item['name']}", style={"fontWeight": "700", "fontSize": "13px", "color": cfg["text_main"], "letterSpacing": "0.5px"}),
+                                badge,
+                            ],
+                            style={"display": "flex", "justifyContent": "space-between", "alignItems": "center", "marginBottom": "4px"}
+                        ),
+                        html.Div(item["sub"], style={"fontSize": "11.5px", "color": cfg["text_dim"], "lineHeight": "1.4"}),
+                    ]
+                ),
+                href=item["href"],
+                style=card_style,
+                className="nav-card-item",
+            )
+        )
+
+    offcanvas_children.extend(card_links)
+    
+    offcanvas_children.append(
+        html.Div(
+            [
+                html.Div(
+                    [
+                        html.Span("● ", style={"color": cfg["accent_red"], "fontSize": "12px"}),
+                        html.Span("NIFTY 500 MODEL LIVE", style={"color": cfg["text_main"], "fontWeight": "700", "fontSize": "11px", "letterSpacing": "0.5px"}),
+                    ],
+                    style={"background": cfg["bg_page"], "padding": "8px 14px", "borderRadius": "20px", "display": "inline-block", "border": f"1px solid {cfg['border']}", "marginBottom": "12px"}
+                ),
+                html.Div(
+                    [
+                        html.Span("MADE BY ", style={"color": cfg["text_dim"], "fontSize": "10px", "letterSpacing": "1px", "fontWeight": "600"}),
+                        html.Span("ABANTIKA SAHA ROY", style={"color": cfg["accent_red"], "fontSize": "11px", "letterSpacing": "1px", "fontWeight": "700", "fontFamily": "'Space Grotesk', sans-serif"}),
+                    ]
+                )
+            ],
+            style={"marginTop": "24px", "paddingTop": "18px", "borderTop": f"1px solid {cfg['border']}", "textAlign": "center"}
+        )
+    )
+
+    offcanvas = dbc.Offcanvas(
+        offcanvas_children,
+        id="offcanvas-nav",
+        title=html.Span("ANOMALYIQ MENU", style={"fontFamily": "'Space Grotesk', sans-serif", "fontWeight": "700", "letterSpacing": "0.5px", "color": cfg["text_main"]}),
+        is_open=False,
+        placement="end",
+        style={"width": "360px", "background": cfg["bg_page"]},
+    )
+
+    active_pill = html.Div(
+        [
+            html.Span(f"{active_item['icon']} ", style={"fontSize": "13px"}),
+            html.Span(f"{active_item['num']} {active_item['name']}", style={"fontWeight": "700", "fontSize": "11.5px", "color": cfg["text_main"], "letterSpacing": "0.5px"}),
+        ],
+        style={
+            "background": cfg["card_bg"],
+            "border": f"1px solid {cfg['border']}",
+            "padding": "6px 14px",
+            "borderRadius": "20px",
+            "display": "flex",
+            "alignItems": "center",
+            "gap": "6px",
+        },
+        className="active-page-pill",
+    )
+
+    hamburger_button = html.Button(
+        [
+            html.Span("☰", style={"fontSize": "16px", "marginRight": "6px", "lineHeight": "1"}),
+            html.Span("MENU", style={"fontFamily": "'Space Grotesk', sans-serif", "fontWeight": "700", "fontSize": "12px", "letterSpacing": "0.8px"}),
+        ],
+        id="hamburger-btn",
+        n_clicks=0,
+        className="hamburger-menu-btn",
+        style={
+            "background": cfg["card_bg"],
+            "border": f"1px solid {cfg['border']}",
+            "color": cfg["text_main"],
+            "padding": "7px 16px",
+            "borderRadius": "6px",
+            "cursor": "pointer",
+            "display": "flex",
+            "alignItems": "center",
+            "transition": "all 0.2s ease",
+            "outline": "none",
+        }
+    )
 
     return html.Div(
         [
-            dcc.Link("01  INDUSTRY OVERVIEW", href="/industry", style=get_link_style("/industry")),
-            dcc.Link("02  ANOMALY EXPLORER", href="/anomaly", style=get_link_style("/anomaly")),
-            dcc.Link("03  COMPANY DEEP DIVE", href="/company", style=get_link_style("/company")),
-            dcc.Link("04  METHODOLOGY", href="/methodology", style=get_link_style("/methodology")),
+            active_pill,
+            hamburger_button,
+            offcanvas,
         ],
-        className="nav-links-box",
-        style={"display": "flex", "gap": "28px", "alignItems": "center"}
+        style={"display": "flex", "gap": "14px", "alignItems": "center"}
     )
 
 
@@ -1296,6 +1431,18 @@ def render_app_container(pathname):
     container_className = "light-theme"
 
     return [navbar, content, footer], container_style, container_className
+
+
+@app.callback(
+    Output("offcanvas-nav", "is_open"),
+    Input("hamburger-btn", "n_clicks"),
+    State("offcanvas-nav", "is_open"),
+    prevent_initial_call=True,
+)
+def toggle_offcanvas(n_clicks, is_open):
+    if n_clicks:
+        return not is_open
+    return is_open
 
 
 # ─────────────────────────────────────────────
