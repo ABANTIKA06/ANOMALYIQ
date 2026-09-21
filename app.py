@@ -1045,78 +1045,93 @@ def layout_methodology(cfg):
                 [
                     card(
                         [
-                            html.Div("1️⃣ Accruals Ratio (Sloan's Anomaly)", style={"color": cfg["accent_red"], "fontWeight": "700", "fontSize": "15px", "marginBottom": "6px"}),
-                            html.Div("Formula: (Net Profit - Operating Cash Flow) / Total Assets", style={"color": cfg["text_main"], "fontSize": "12px", "fontFamily": "monospace", "background": cfg["bg_page"], "padding": "4px 8px", "borderRadius": "4px", "marginBottom": "12px", "display": "inline-block"}),
+                            html.Div("1️⃣ Accruals Ratio (Sloan's Anomaly)", style={"color": cfg["accent_red"], "fontWeight": "700", "fontSize": "15px", "marginBottom": "8px"}),
+                            html.Div("Formula: (Net Profit - Operating Cash Flow) / Total Assets", style={"color": cfg["text_main"], "fontSize": "11.5px", "fontFamily": "monospace", "background": cfg["bg_page"], "padding": "6px 10px", "borderRadius": "4px", "marginBottom": "12px", "display": "inline-block", "border": f"1px solid {cfg['border']}"}),
                             html.P(
                                 "Accounting profit is based on accrual accounting, which includes unpaid invoices and uncollected revenues. "
                                 "When reported Net Profit consistently exceeds Cash from Operating Activities, the Accruals Ratio spikes. "
                                 "Historically (Sloan, 1996), high positive accruals signal low-quality earnings vulnerable to future earnings restatements.",
-                                style={"color": cfg["text_dim"], "fontSize": "13px", "lineHeight": "1.5", "margin": "0"}
+                                style={"color": cfg["text_dim"], "fontSize": "13px", "lineHeight": "1.6", "margin": "0"}
                             )
                         ],
-                        style={"flex": "1"},
+                        style={"flex": "1", "minWidth": "280px"},
                         theme_cfg=cfg,
                     ),
                     card(
                         [
-                            html.Div("2️⃣ Leverage Change YoY", style={"color": cfg["accent_red"], "fontWeight": "700", "fontSize": "15px", "marginBottom": "6px"}),
-                            html.Div("Formula: (Debt_t - Debt_t-1) / Total Assets_t-1", style={"color": cfg["text_main"], "fontSize": "12px", "fontFamily": "monospace", "background": cfg["bg_page"], "padding": "4px 8px", "borderRadius": "4px", "marginBottom": "12px", "display": "inline-block"}),
+                            html.Div("2️⃣ Leverage Change YoY", style={"color": cfg["accent_red"], "fontWeight": "700", "fontSize": "15px", "marginBottom": "8px"}),
+                            html.Div("Formula: (Debt_t - Debt_t-1) / Total Assets_t-1", style={"color": cfg["text_main"], "fontSize": "11.5px", "fontFamily": "monospace", "background": cfg["bg_page"], "padding": "6px 10px", "borderRadius": "4px", "marginBottom": "12px", "display": "inline-block", "border": f"1px solid {cfg['border']}"}),
                             html.P(
                                 "Tracks rapid debt expansion relative to capital structure. "
                                 "Sudden jumps in leverage indicate aggressive debt-fueled expansion, refinancing distress, or reliance on external borrowing to maintain operations.",
-                                style={"color": cfg["text_dim"], "fontSize": "13px", "lineHeight": "1.5", "margin": "0"}
+                                style={"color": cfg["text_dim"], "fontSize": "13px", "lineHeight": "1.6", "margin": "0"}
                             )
                         ],
-                        style={"flex": "1"},
+                        style={"flex": "1", "minWidth": "280px"},
                         theme_cfg=cfg,
                     ),
                     card(
                         [
-                            html.Div("3️⃣ Margin Volatility (3-Year Rolling Std Dev)", style={"color": cfg["accent_red"], "fontWeight": "700", "fontSize": "15px", "marginBottom": "6px"}),
-                            html.Div("Formula: StdDev(Operating Margin_t-2..t)", style={"color": cfg["text_main"], "fontSize": "12px", "fontFamily": "monospace", "background": cfg["bg_page"], "padding": "4px 8px", "borderRadius": "4px", "marginBottom": "12px", "display": "inline-block"}),
+                            html.Div("3️⃣ Margin Volatility (3-Year Rolling Std Dev)", style={"color": cfg["accent_red"], "fontWeight": "700", "fontSize": "15px", "marginBottom": "8px"}),
+                            html.Div("Formula: StdDev(Operating Margin_t-2..t)", style={"color": cfg["text_main"], "fontSize": "11.5px", "fontFamily": "monospace", "background": cfg["bg_page"], "padding": "6px 10px", "borderRadius": "4px", "marginBottom": "12px", "display": "inline-block", "border": f"1px solid {cfg['border']}"}),
                             html.P(
                                 "Measures the operational stability of core business margins. "
                                 "High volatility highlights erratic pricing power, vulnerability to commodity swings, or inconsistent expense recognition.",
-                                style={"color": cfg["text_dim"], "fontSize": "13px", "lineHeight": "1.5", "margin": "0"}
+                                style={"color": cfg["text_dim"], "fontSize": "13px", "lineHeight": "1.6", "margin": "0"}
                             )
                         ],
-                        style={"flex": "1"},
+                        style={"flex": "1", "minWidth": "280px"},
                         theme_cfg=cfg,
                     ),
                 ],
-                style={"display": "flex", "gap": "16px", "marginBottom": "24px"}
+                className="responsive-flex-row",
+                style={"gap": "16px", "marginBottom": "24px", "flexWrap": "wrap"}
             ),
 
             # Anomaly Score Definition & Constraints Card
             card(
                 [
-                    html.H5("⚡ What is the Anomaly Score & What Are Its Constraints?", style={"color": cfg["text_main"], "fontWeight": "700", "marginBottom": "12px"}),
+                    html.H5("⚡ What is the Anomaly Score & What Are Its Constraints?", style={"color": cfg["text_main"], "fontWeight": "700", "marginBottom": "14px"}),
                     html.P(
                         "The Anomaly Score is an unsupervised machine learning metric derived from Isolation Forest path lengths. "
                         "Instead of evaluating a single ratio in isolation, it evaluates multi-dimensional interaction across Accruals, "
                         "Leverage Growth, Operating Margins, and Volatility simultaneously relative to industry peers.",
-                        style={"color": cfg["text_dim"], "fontSize": "13.5px", "lineHeight": "1.6", "marginBottom": "14px"}
+                        style={"color": cfg["text_dim"], "fontSize": "13.5px", "lineHeight": "1.6", "marginBottom": "18px"}
                     ),
                     html.Div(
                         [
-                            html.H6("🔍 Score Interpretation Breakdown:", style={"color": cfg["text_main"], "fontWeight": "700", "fontSize": "13px", "marginBottom": "10px"}),
-                            html.Div([
-                                html.Span("🟢 ", style={"fontSize": "12px"}),
-                                html.B("0.00 – 0.15 (Normal Baseline): "),
-                                html.Span("Standard accounting trajectory. Financial statements align closely with sector norms.")
-                            ], style={"marginBottom": "8px", "color": cfg["text_main"], "fontSize": "13px"}),
-                            html.Div([
-                                html.Span("🟡 ", style={"fontSize": "12px"}),
-                                html.B("0.15 – 0.20 (Watchlist Risk): "),
-                                html.Span("Moderate statistical divergence. Indicates emerging accrual gaps or accelerating leverage.")
-                            ], style={"marginBottom": "8px", "color": cfg["text_main"], "fontSize": "13px"}),
-                            html.Div([
-                                html.Span("🔴 ", style={"fontSize": "12px"}),
-                                html.B("> 0.20 (Flagged Anomaly Outlier): "),
-                                html.Span("High multivariate deviation. Represents extreme financial outliers requiring immediate forensic audit.")
-                            ], style={"marginBottom": "0", "color": cfg["text_main"], "fontSize": "13px"}),
+                            html.H6("🔍 Score Interpretation Breakdown:", style={"color": cfg["text_main"], "fontWeight": "700", "fontSize": "13px", "marginBottom": "12px"}),
+                            html.Div(
+                                [
+                                    html.Div(
+                                        [
+                                            html.Div("🟢 0.00 – 0.15", style={"fontWeight": "700", "color": "#10B981", "fontSize": "13px", "marginBottom": "4px"}),
+                                            html.B("Normal Baseline", style={"color": cfg["text_main"], "fontSize": "12.5px", "display": "block", "marginBottom": "4px"}),
+                                            html.Span("Standard accounting trajectory. Financial statements align closely with sector norms.", style={"color": cfg["text_dim"], "fontSize": "12px", "lineHeight": "1.4"})
+                                        ],
+                                        style={"flex": "1", "minWidth": "220px", "background": cfg["card_bg"], "padding": "12px 14px", "borderRadius": "6px", "border": f"1px solid {cfg['border']}"}
+                                    ),
+                                    html.Div(
+                                        [
+                                            html.Div("🟡 0.15 – 0.20", style={"fontWeight": "700", "color": cfg["accent_gold"], "fontSize": "13px", "marginBottom": "4px"}),
+                                            html.B("Watchlist Risk", style={"color": cfg["text_main"], "fontSize": "12.5px", "display": "block", "marginBottom": "4px"}),
+                                            html.Span("Moderate statistical divergence. Indicates emerging accrual gaps or accelerating leverage.", style={"color": cfg["text_dim"], "fontSize": "12px", "lineHeight": "1.4"})
+                                        ],
+                                        style={"flex": "1", "minWidth": "220px", "background": cfg["card_bg"], "padding": "12px 14px", "borderRadius": "6px", "border": f"1px solid {cfg['border']}"}
+                                    ),
+                                    html.Div(
+                                        [
+                                            html.Div("🔴 > 0.20", style={"fontWeight": "700", "color": cfg["accent_red"], "fontSize": "13px", "marginBottom": "4px"}),
+                                            html.B("Flagged Anomaly Outlier", style={"color": cfg["text_main"], "fontSize": "12.5px", "display": "block", "marginBottom": "4px"}),
+                                            html.Span("High multivariate deviation. Represents extreme financial outliers requiring immediate forensic audit.", style={"color": cfg["text_dim"], "fontSize": "12px", "lineHeight": "1.4"})
+                                        ],
+                                        style={"flex": "1", "minWidth": "220px", "background": cfg["card_bg"], "padding": "12px 14px", "borderRadius": "6px", "border": f"1px solid {cfg['border']}"}
+                                    ),
+                                ],
+                                style={"display": "flex", "gap": "12px", "flexWrap": "wrap", "marginBottom": "16px"}
+                            ),
                         ],
-                        style={"background": cfg["bg_page"], "padding": "16px", "borderRadius": "6px", "border": f"1px solid {cfg['border']}", "marginBottom": "16px"}
+                        style={"background": cfg["bg_page"], "padding": "18px", "borderRadius": "8px", "border": f"1px solid {cfg['border']}", "marginBottom": "18px"}
                     ),
                     html.Div(
                         [
@@ -1127,7 +1142,7 @@ def layout_methodology(cfg):
                                     html.Li([html.B("Industry-Relative Evaluation: "), "A company is evaluated relative to its specific sector peers (e.g., IT services accruals vs Real Estate leverage), ensuring sector-specific accounting norms do not distort scores."]),
                                     html.Li([html.B("Statistical Outlier ≠ Fraud Proof: "), "The Isolation Forest detects mathematical abnormality. High scores flag company-years needing deep accounting review, not definitive proof of illegality."]),
                                 ],
-                                style={"color": cfg["text_dim"], "fontSize": "13px", "lineHeight": "1.5", "paddingLeft": "18px", "margin": "0"}
+                                style={"color": cfg["text_dim"], "fontSize": "13px", "lineHeight": "1.6", "paddingLeft": "18px", "margin": "0"}
                             )
                         ]
                     ),
@@ -1146,14 +1161,14 @@ def layout_methodology(cfg):
                                 "Financial anomalies are rare, diverse, and unlabelled. Supervised models fail because true fraud labels are scarce. "
                                 "Isolation Forests build decision trees by randomly selecting features and split values. "
                                 "Anomalous data points require far fewer splits to isolate compared to normal clusters, giving them high anomaly scores.",
-                                style={"color": cfg["text_dim"], "fontSize": "13px", "lineHeight": "1.5"}
+                                style={"color": cfg["text_dim"], "fontSize": "13px", "lineHeight": "1.6"}
                             ),
                             html.P(
                                 "Our pipeline runs Isolation Forests grouped per Industry to evaluate each company relative to its sector peers.",
-                                style={"color": cfg["text_dim"], "fontSize": "13px", "lineHeight": "1.5", "margin": "0"}
+                                style={"color": cfg["text_dim"], "fontSize": "13px", "lineHeight": "1.6", "margin": "0"}
                             )
                         ],
-                        style={"flex": "1"},
+                        style={"flex": "1", "minWidth": "300px"},
                         theme_cfg=cfg,
                     ),
                     card(
@@ -1165,14 +1180,15 @@ def layout_methodology(cfg):
                                     html.Li("Anomaly Explorer: 2D feature scatter mapping multi-dimensional risk interaction (e.g. Accruals vs Leverage Δ).", style={"marginBottom": "8px"}),
                                     html.Li("Company Deep Dive: 10-year longitudinal drilldown to verify profit-cashflow gaps & anomaly years.", style={"margin": "0"}),
                                 ],
-                                style={"color": cfg["text_dim"], "fontSize": "13px", "lineHeight": "1.5", "paddingLeft": "18px", "margin": "0"}
+                                style={"color": cfg["text_dim"], "fontSize": "13px", "lineHeight": "1.6", "paddingLeft": "18px", "margin": "0"}
                             )
                         ],
-                        style={"flex": "1"},
+                        style={"flex": "1", "minWidth": "300px"},
                         theme_cfg=cfg,
                     ),
                 ],
-                style={"display": "flex", "gap": "16px"}
+                className="responsive-flex-row",
+                style={"gap": "16px", "flexWrap": "wrap"}
             ),
         ]
     )
